@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -14,6 +15,10 @@ const CloseHanburger = "/assets/images/icons/close-hamburger.svg";
 const SecondNavbar = () => {
   const [burgerOpen, setBurgerOpen]  = useState(false);
   const router = useRouter();
+
+  const menuClasses = classNames("navbar-menu", {
+    ["is-active"]: burgerOpen,
+  });
 
   let connectedWallet = false;
   if (
@@ -60,21 +65,25 @@ const SecondNavbar = () => {
         </a>
       </div>
 
-      <div id="navbarBasicExample" className="navbar-menu">
-        <div className="navbar-start ml-5 pl-5" style={{gap: '5px'}}>
+      <div id="navbarBasicExample" className={`${menuClasses} ${classes.navbarMenu}`}>
+        <div className={`navbar-start ml-5 pl-5 ${classes.navbarStart}`} style={{gap: '5px'}}>
           <div className={`navbar-item ${classes.navbarItem} ${getIsActive('/swap')}`}>
-            <Link href='/swap'>
+            <Link href='/swap' >
+              <a onClick={() => setBurgerOpen(false)} >
               SWAP
+              </a>
              </Link>
           </div>
           <div style={{pointerEvents: 'none'}} className={`navbar-item ${classes.navbarItem}`}>
-            <Link href='/pool'>
+            <Link href='/pool' >
               POOL
              </Link>
           </div>
           <div className={`navbar-item ${classes.navbarItem} ${getIsActive('/charts')}`}>
-            <Link href='/charts'>
-              CHARTS
+            <Link href='/charts' >
+             <a onClick={() => setBurgerOpen(false)}>
+             CHARTS
+             </a>
              </Link>
           </div>
         </div>
@@ -82,7 +91,9 @@ const SecondNavbar = () => {
           <div className="navbar-item">
             <div className="buttons">
            
+            <div>
             {connectedWallet ? <ConnectedWallet />  : <LinearButton text="Connect Wallet" /> }
+            </div>
             </div>
           </div>
         </div>

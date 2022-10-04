@@ -1,3 +1,5 @@
+@import '../../../styles/variables/mixins.scss';
+
 .dropdown {
     background: linear-gradient(90deg, #F506FE 0%, #06D6DF 100%);
     border-radius: 10px;
@@ -22,6 +24,10 @@
 
     }
 
+
+    @include for-max-width-desktop {
+        width: 100%;
+    }
 }
 
 .dropdownMenu {
