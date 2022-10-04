@@ -69,7 +69,8 @@
 
 
 .navbarMenu {
-    height: 100vh;
+    @include for-max-width-desktop {
+        height: 100vh;
     width: 80%;
     float: right;
     position: fixed;
@@ -79,4 +80,5 @@
     margin-top: 5px;
     display: none;
     z-index: 999;
+    }
 }
