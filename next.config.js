@@ -5,7 +5,8 @@ const nextConfig = {
   swcMinify: true,
   sassOptions: {
     includePaths: [path.resolve(__dirname, 'src/styles')],
-  }
+  },
+  swcMinify: false
 }
 
 module.exports = nextConfig
