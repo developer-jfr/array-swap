@@ -1,0 +1,126 @@
+@import '../../styles/variables/mixins.scss';
+
+.customNavbar {
+    background: #2B2D3C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.navbarBrand {
+    padding-block: 15px;
+    padding-inline: 50px;
+    display: flex;
+    justify-content: space-between;
+    @include for-max-width-desktop {
+        padding-inline: 10px;
+        padding-left: 20px;
+    }
+}
+
+.customBtn {
+    padding: 22px 0;
+    background: 
+    linear-gradient(#2B2D3C, #2B2D3C) padding-box,
+    linear-gradient(to right, #F506FE 0%, #06D6DF 100%) border-box;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 50px;
+    width: 265px;
+    @include for-max-width-desktop {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.linearBtn {
+    background: linear-gradient(90deg, #F506FE 0%, #06D6DF 100%);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    padding: 8px 12px;
+    display: none;
+
+    @include for-max-width-desktop {
+        display: block;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.buttonGroup {
+    display: flex;
+    @include for-max-width-desktop {
+        flex-direction: column;
+    }
+}
+
+.desktopMenu {
+    @include for-max-width-desktop {
+        display: none !important;
+    }
+}
+
+
+.navbarMenu {
+    height: 100vh;
+    width: 80%;
+    float: right;
+    position: fixed;
+    right: 0;
+    background: #2B2D3C;
+    margin-top: 5px;
+    display: none;
+    z-index: 999;
+}
+
+.socialLink {
+    display: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    padding-top: 30px;
+
+
+    a {
+        color: #D9D9D9;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    @include for-max-width-desktop {
+        display: block;
+    }
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+    @include for-max-width-desktop {
+        display: block;
+    }
+}

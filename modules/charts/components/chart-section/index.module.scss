@@ -1,0 +1,11 @@
+@import '../../../../styles/variables/mixins.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include for-max-width-desktop {
+        flex-direction: column;
+        gap: 50px;
+    }
+}

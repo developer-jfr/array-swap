@@ -1,0 +1,130 @@
+@import '../../styles/variables/mixins.scss';
+
+.wrapper {
+    background: #2B2D3C;
+}
+
+.profileSection {
+    display: flex;
+    gap: 30px;
+    padding-block: 30px;
+    padding-inline: 50px;
+
+
+    @include for-max-width-desktop {
+        padding-inline: 40px;
+    }
+
+    @include for-max-width-tabled {
+        padding-inline: 20px;
+    }
+}
+
+.profileContent h1 {
+    color: #FAFAFA;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    
+    @include for-max-width-desktop {
+        font-size: 40px;
+    }
+
+    @include for-max-width-tabled {
+        font-size: 15px;
+
+        line-height: 30px;
+    }
+}
+
+.profileContent span {
+    color: #989BB4;
+
+
+    @include for-max-width-tabled {
+        font-size: 10px;
+    }
+}
+
+.profileContent p {
+    padding-top: 24px;
+    color: #FFFFFF;
+
+    @include for-max-width-desktop {
+        font-size: 16px;
+    }
+
+    @include for-max-width-tabled {
+        padding-top: 5px;
+        font-size: 8px;
+    }
+}
+
+.profileImg {
+    position: relative;
+    width: 309px;
+    height: 252px;
+
+    @include for-max-width-desktop {
+        width: 100%;
+    }
+
+    @include for-max-width-tabled {
+        height: auto;
+    }
+}
+
+.tab {
+    @include for-max-width-tabled {
+        background: #37394D;
+border-radius: 2px;
+    }
+}
+
+.tabItem {
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+.tabItem span {
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 29px;
+    color: #9296AE;
+    white-space: nowrap;
+
+    @include for-max-width-tabled {
+        font-size: 15px;
+    }
+}
+
+.tabItem p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 29px;
+    color: #FFF;
+    
+
+    @include for-max-width-tabled {
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+.tabList {
+    border-top: 1px solid #494D66 !important;
+    border-bottom: 1px solid #494D66 !important;
+    padding-left: 24.5%;
+    padding-block: 10px;
+
+    @include for-max-width-tabled {
+        padding-left: 0 !important;
+        display: flex;
+        justify-content: center;
+    }
+}

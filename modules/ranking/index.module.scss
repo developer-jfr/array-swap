@@ -1,0 +1,250 @@
+@import '../../styles/variables/mixins.scss';
+
+.wrapper {
+    background: #F1F1F3;
+}
+
+.collectionNaming {
+    padding: 30px;
+    padding-left: 50px;
+
+    @include for-max-width-tabled {
+        padding-left: 0;
+        padding: 10px;
+        padding-top: 50px;
+    }
+}
+
+.collectionNaming h2 {
+    color: #2B2D3C;
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 45px;
+
+    @include for-max-width-tabled {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+}
+
+.selectGroup {
+    display: flex;
+    justify-content: space-between;
+
+    @include for-max-width-tabled {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+.customSelect {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #FAFAFA;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.daysGroup {
+    display: flex;
+    gap: 12px;
+
+    @include for-max-width-tabled {
+        padding-bottom: 20px;
+    }
+}
+
+.daysGroup span {
+    padding: 5px 8px;
+    background: #FAFAFA;
+    border: 0.5px solid #989BB4;
+    border-radius: 4px;
+    position: relative;
+    transition: .5s;
+
+    @include for-max-width-tabled {
+        font-size: 14px;
+    }
+}
+
+.daysGroup span:hover {
+    border: none;
+    transition: .5s;
+}
+
+.daysGroup span:hover::before,
+.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    border: .5px solid transparent;
+    background: linear-gradient(45deg, #FA02FF, #06D6DF) border-box;
+    mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.customTable {
+    border-top: 1px solid #E4E4E6;
+}
+
+.customTable table {
+    background: transparent;
+    width: 100%;
+}
+
+.customHead {
+    border-bottom: 1px solid #E4E4E6;
+}
+
+.customHead tr th:first-child {
+    padding-left: 60px;
+
+    @include for-max-width-desktop {
+        padding-left: 10px;
+    }
+}
+
+.customHead tr  th div {
+    padding-block: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #494D66;
+    display: flex;
+    align-items: center ;
+    white-space: nowrap;
+    gap: 5px;
+
+    @include for-max-width-desktop {
+        font-size: 8px;
+        padding-block: 10px;
+    }
+}
+
+.customTable table tbody {
+    border: none;
+    border-bottom: 1px solid #E4E4E6;
+    padding-inline: 300px;
+    padding-block: 20px;
+    margin-inline: 300px;
+    margin-block: 20px;
+}
+
+.customBody tr th {
+    padding-left: 60px;
+    vertical-align: middle;
+    padding-block: 20px;
+
+    @include for-max-width-desktop {
+        padding-left: 10px;
+    }
+}
+
+.customBody tr td {
+    padding-block: 20px;
+    vertical-align: middle;
+
+    @include for-max-width-tabled {
+        font-size: 10px;
+    }
+}
+
+.customBody tr {
+    position: relative;
+}
+
+.customBody tr:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(250, 2, 255, 0.05) 0%, rgba(6, 214, 223, 0.05) 100%);
+}
+
+
+
+.customBody tr th,
+.customBody tr td {
+    border: none;
+}
+
+.bodyImgCard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 200px;
+
+    span {
+        @include for-max-width-desktop {
+            width: 60px !important;
+            height: 60px !important;
+        }
+    }
+
+    @include for-max-width-desktop {
+        font-size: 10px;
+        padding-right: 0;
+    }
+}
+
+.priceItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+
+    @include for-max-width-tabled {
+        font-size: 10px;
+    }
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.pagination div {
+    display: flex;
+    gap: 8px;
+}
+
+.pagination div p {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 30px;
+    padding-inline: 12px;
+    background: #FAFAFA;
+    border: 0.5px solid #9296AE;
+    border-radius: 4px;
+    position: relative;
+}
+
+
+.active {
+    border: none !important;
+}
+
+
+.arrowIcon {
+    background: #FAFAFA;
+    border: 0.5px solid #9296AE;
+    border-radius: 4px;
+    width: 34px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableScroll::-webkit-scrollbar {
+     display: none;
+}

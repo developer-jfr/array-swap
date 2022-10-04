@@ -1,0 +1,258 @@
+@import '../../../../styles/variables/mixins.scss';
+
+.container {
+    padding-top: 50px;
+    padding-left: 50px;
+
+    @include for-max-width-desktop {
+        padding-left: 0;
+    }
+}
+
+.elementsWrapp {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+
+    @include for-max-width-desktop {
+        grid-template-columns: 1fr;
+    }
+}
+
+.copyCard {
+    display: flex;
+    background: #42455C;
+    border-radius: 10px;
+    padding: 25px;
+
+    span {
+        color: #F1F1F3;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        margin-right: 30px;
+
+
+        @include for-max-width-desktop {
+            font-size: 15px;
+        }
+
+        @include for-max-width-tabled {
+            font-size: 8px;
+        }
+    }
+
+    div {
+        display: flex;
+        gap: 10px;
+    }
+
+    @include for-max-width-desktop {
+        padding: 15px;
+    }
+
+    @include for-max-width-tabled {
+        padding: 10px;
+    }
+}
+
+.checkboxTitle {
+    color: #F1F1F3;font-weight: 500;
+    font-size: 24px;
+}
+
+.wrapperCard {
+    background: #303242;
+    border: 1px solid #494D66;
+    border-radius: 8px;
+    padding: 25px;
+    margin-right: 10px;
+}
+
+.twoCardWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.firstSection {
+    padding-inline: 15px;
+}
+
+.secondSection {
+    margin-top: 52px;
+    overflow-y: scroll;
+    height: 800px;
+    margin-right: 10px;
+
+
+    @include for-max-width-desktop {
+        margin-right: 0;
+        margin-inline: 15px;
+    }
+
+}
+
+.secondSection::-webkit-scrollbar-track {
+    background-color: #42455C;
+    border-radius: 20px;
+  }
+  
+  .secondSection::-webkit-scrollbar-thumb {
+    background-color: #2B2D3C;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+
+
+.balanceCard {
+    background: #42455C;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 10px 20px;
+    padding-right: 80px;
+    width: 40%;
+
+    span {
+        color: #A0A5BF;
+        font-weight: 400;
+
+        @include for-max-width-desktop {
+            font-size: 14px;
+        }
+    }
+
+    div {
+        color: #F1F1F3;
+        font-weight: 600;
+
+        @include for-max-width-desktop {
+            font-size: 12px;
+        }
+    }
+
+    @include for-max-width-desktop {
+        height: fit-content;
+    }
+}
+
+.priceCard {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: #42455C;
+    border-radius: 8px;
+    padding-inline:30px;
+    div {
+        span {
+            color: #A0A5BF;
+
+            @include for-max-width-desktop {
+                font-size: 14px;
+            }
+
+        }
+
+        p {
+            color: #F1F1F3;
+            padding-top: 5px;
+
+            @include for-max-width-desktop {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @include for-max-width-desktop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-block: 10px;
+    }
+}
+
+.ownerTitle {
+    display: block;
+    color: #9296AE;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+
+    @include for-max-width-tabled {
+        font-size: 8px;
+        padding-left: 5px;
+    }
+}
+
+.inputGroup {
+    margin-top: 20px;
+    background: #42455c;
+    border-radius: 8px;
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-block: 10px;
+
+    label {
+        padding: 12px 25px;
+        width: 100%;
+        display: block;
+        text-align: left;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: color 200ms ease-in;
+        overflow: hidden;
+
+        &:after {
+            width: 20px;
+            height: 20px;
+            content: "";
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            background-color: #2b2d3c;
+            background-repeat: no-repeat;
+            background-position: 2px 3px;
+            border-radius: 2px;
+            z-index: 2;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: all 200ms ease-in;
+        }
+    }
+
+    input:checked~label {
+        &:after {
+            background: linear-gradient(90deg, #fa02ff 0%, #06d6df 100%);
+        }
+    }
+
+    input {
+        width: 32px;
+        height: 32px;
+        order: 1;
+        z-index: 2;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        visibility: hidden;
+    }
+}
+
+
+/* ================= Resposive ========================= */
+
+@include for-max-width-desktop {
+    .secondSection::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,0 +1,67 @@
+@import  '../../../../styles/variables/mixins.scss';
+
+.container {
+    width: 640px;
+    padding: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(47, 49, 66, 0.1);
+    border-radius: 20px;
+
+    @include for-max-width-tabled {
+        width: 100%;
+        margin-inline: 10px;
+        margin-top: 20px;
+        margin-bottom: 80px;
+        padding: 20px;
+    }
+}
+
+.container h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+
+    @include for-max-width-tabled {
+        font-size: 18px;
+    }
+}
+
+.container p {
+    padding-top: 5px;
+    padding-bottom: 40px;
+    color: #494D66;
+    font-weight: 400;
+    font-size: 16px;
+
+    @include for-max-width-tabled {
+        font-size: 14px;
+    }
+}
+
+.btnGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-inline: 50px;
+
+    @include for-max-width-tabled {
+        padding-inline: 0;
+    }
+}
+
+.customBtn {
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, rgba(250, 2, 255, 0.05) 0%, rgba(38, 186, 227, 0.05) 100%);
+    border-radius: 10px;
+    padding-block: 20px;
+    color: #9879F1;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+
+    @include for-max-width-tabled {
+        font-size: 14px;
+    }
+}

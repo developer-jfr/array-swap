@@ -1,0 +1,65 @@
+@import '../../styles/variables/mixins.scss';
+
+.dropdown {
+    background: transparent;
+    border: none;
+    box-shadow: none !important;
+    color: #fff !important;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.dropdown h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: #F1F1F3;
+
+    @include for-max-width-desktop {
+        font-size: 20px;
+    }
+}
+
+
+.optionsWrapp {
+    position: absolute;
+    bottom: -190px;
+    right: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(50, 53, 70, 0.15);
+    border-radius: 10px;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 9;
+
+    div {
+        display: flex;
+        align-items: center;
+        padding-block: 5px;
+        padding-inline: 15px;
+        padding-right: 40px;
+       
+        p {
+            color: #2B2D3C;
+            font-weight: 500;
+        }
+
+        &:hover {
+            background: linear-gradient(90deg, rgba(250, 2, 255, 0.1) 0%, rgba(6, 214, 223, 0.1) 100%);
+        }
+    }
+}
+
+.bigBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(50, 53, 70, 0.6);
+    z-index: 2;
+}

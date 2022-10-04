@@ -1,0 +1,98 @@
+.itemCard {
+    background: #3A3D52;
+    border-radius: 10px;
+    padding-top: 25px;
+    width: 310px;
+    position: relative;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.itemImg {
+    width: 100%;
+    padding: 16px;
+}
+
+.itemImg img {
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+.itemImgWrapp div {
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #D9D9D9;
+    margin-top: -20px;
+}
+
+.itemPrice {
+    margin-top: 20px;
+    background: #484C66;
+    padding: 10px 16px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.priceContent span {
+    color: #F2F2F2;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.priceContent p {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.btnGroup {
+    display: flex;
+    gap: 5px;
+}
+
+.btnGroup button:first-child {
+    color: #FFFFFF;
+    background: #5F6285;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    padding: 3px 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btnGroup button:last-child {
+    color: #FFFFFF;
+    background: transparent;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.btnGroup button:first-child::before, .itemCard:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: .8px solid transparent;
+    background: linear-gradient(45deg, #FA02FF, #06D6DF) border-box;
+    mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}

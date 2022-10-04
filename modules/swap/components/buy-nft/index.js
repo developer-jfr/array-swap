@@ -1,0 +1,59 @@
+import Image from "next/image";
+import classes from "./index.module.scss";
+
+const EnthrerumBlack = "/assets/images/icons/black-ethrerum.svg";
+const Grid = "/assets/images/icons/grid.svg";
+const Grow = "/assets/images/icons/grow.svg";
+const Turtle = "/assets/images/svg/tutle.svg";
+const ArrowLeftWithoutLine = "/assets/images/icons/arrow-left-without-line.svg";
+
+const BuyNft = ({ setShowNft }) => {
+  return (
+    <div className={classes.container}>
+      <div className={classes.modalBody}>
+        <div className={classes.headerWrapp}>
+          <h2>Buy 5 NFT’s</h2>
+          <div>
+            <span>Clear</span>
+            <Image
+              className="is-clickable"
+              onClick={() => setShowNft(false)}
+              src={Grid}
+              height={24}
+              width={24}
+            />
+          </div>
+        </div>
+        <div className={classes.totalWrapp}>
+          <div>
+            <Image src={ArrowLeftWithoutLine} height={18} width={6} />
+            <span>Buy Total:</span>
+          </div>
+          <div>
+            <Image src={EnthrerumBlack} height={24} width={24} />
+            <span>10.000</span>
+          </div>
+        </div>
+        <div className={classes.cardGroup}>
+          <div className={classes.card}>
+            <div className={classes.cardHeader}>
+              <Image src={Turtle} height={76} width={80} />
+              <div>
+                <span>Clone X - X Tak...</span>
+                <p>#1</p>
+              </div>
+            </div>
+            <div className={classes.cardBody}>
+              <Image src={EnthrerumBlack} height={24} width={24} />
+
+              <span>3.3</span>
+              <Image src={Grow} height={14} width={24} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BuyNft;

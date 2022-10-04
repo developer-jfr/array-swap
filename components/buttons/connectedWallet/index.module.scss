@@ -1,0 +1,78 @@
+.dropdown {
+    background: linear-gradient(90deg, #F506FE 0%, #06D6DF 100%);
+    border-radius: 10px;
+    width: 187px;
+    padding-block: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+
+    span {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+}
+
+.dropdownMenu {
+    min-width: 14rem;
+    top: 110%;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.dropdownContent {
+    padding: 16px;
+    border-radius: 10px;
+
+    span {
+        color: #919299;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    p {
+        color: #2B2D3C;
+        font-weight: 600;
+        font-size: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #E6E6E6;
+    }
+}
+
+
+.cardWrapp {
+    margin-top: -10px;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 25px;
+        padding-left: 5px;
+        cursor: pointer;
+
+
+
+        span {
+            color: #37394D;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

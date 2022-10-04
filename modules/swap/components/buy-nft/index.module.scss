@@ -1,0 +1,122 @@
+@import '../../../../styles/variables/mixins.scss';
+
+.container {
+    width: 690px;
+    height: 100%;
+
+    @include for-max-width-desktop {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #7E808B;
+        width: 100%;
+        height: 100%;
+        z-index: 990;
+        display: grid;
+        align-items: flex-end;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.headerWrapp {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 39px;
+        color: #494D66;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+
+        span {
+            color: #2B2B2B;
+            font-weight: 500;
+        }
+    }
+}
+
+.totalWrapp {
+    padding: 20px;
+    padding-block: 10px;
+    background: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.totalWrapp div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #2B2B2B;
+    }
+}
+
+.totalWrapp div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    span {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #494D66;
+    }
+}
+
+.cardGroup {
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardBody {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    span {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #494D66;
+
+    }
+}
+
+.modalBody {
+    background: #FFFFFF;
+    border-radius: 10px 0px 0px 0px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: -50px;
+    height: 100%;
+}

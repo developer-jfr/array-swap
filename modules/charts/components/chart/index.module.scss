@@ -1,0 +1,74 @@
+@import '../../../../styles/variables/mixins.scss';
+
+.chartWrapp {
+    position: relative;
+    width: 70%;
+
+    @include for-max-width-desktop {
+        width: 100%;
+    }
+}
+
+.canvas {
+    height: 600px;
+
+    @include for-max-width-tabled {
+        height: 400px !important;
+    }
+
+    @include for-max-width-mobile {
+        height: 300px !important;
+    }
+}
+
+
+.daysGroup {
+    position: absolute;
+    top:30px;
+    left: 35px;
+    z-index: 2;
+
+    @include for-max-width-tabled {
+        display: none;
+    }
+}
+
+.daysGroup span {
+    background: #3B3D52;
+    border-radius: 4px;
+    padding: 5px 8px;
+    color: #fff;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+
+    @include for-max-width-tabled {
+        font-size: 14px;
+    }
+}
+
+
+.daysGroup span:hover {
+    background: #252633;
+}
+
+.active {
+    background: #252633 !important;
+}
+
+.active::before , .daysGroup span:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    border: .8px solid transparent;
+    background: linear-gradient(45deg, #FA02FF, #06D6DF) border-box;
+    mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}

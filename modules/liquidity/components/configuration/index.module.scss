@@ -1,0 +1,250 @@
+@import '../../../../styles/variables/mixins.scss';
+
+.wrapper {
+    margin-inline: 16%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(47, 49, 66, 0.1);
+    border-radius: 10px;
+    margin-top: -100px;
+    padding-bottom: 70px;
+    margin-bottom: 120px;
+
+    @include for-max-width-desktop {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-inline: 8%;
+    }
+
+    @include for-max-width-tabled {
+        width: 100%;
+        margin-inline: 10px;
+        margin-top: 20px;
+
+    }
+}
+
+.arrowSection {
+    border-bottom: 1px solid #9b9b9b83;
+    display: flex;
+    gap: 60px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+
+    @include for-max-width-tabled {
+        gap: 20px;
+    }
+}
+
+.arrowSection div h2 {
+    color: #2B2D3C;
+    font-weight: 500;
+    font-size: 20px;
+
+    @include for-max-width-tabled {
+        font-size: 16px;
+    }
+}
+
+.arrowSection div p {
+    color: #494D66;
+    font-weight: 400;
+
+    @include for-max-width-tabled {
+        font-size: 14px;
+    }
+}
+
+.configBody {
+    padding-top: 30px;
+    padding-inline: 110px;
+
+    @include for-max-width-desktop {
+        padding-inline: 60px;
+    }
+
+    @include for-max-width-tabled {
+        padding-inline: 30px;
+    }
+}
+
+.copyCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 45px;
+    padding-block: 30px;
+    background: linear-gradient(90deg, rgba(250, 2, 255, 0.1) 0%, rgba(6, 214, 223, 0.1) 101.18%);
+    border-radius: 10px;
+    position: relative;
+
+    @include for-max-width-tabled {
+        padding-inline: 10px;
+        padding-block: 20px;
+    }
+}
+
+.copyCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: .8px solid transparent;
+    background: linear-gradient(45deg, #FA02FF, #06D6DF) border-box;
+    mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.copyCard span {
+    color: #494D66;
+    font-weight: 500;
+    font-size: 17.5px;
+
+    @include for-max-width-desktop {
+        font-size: 14px;
+    }
+
+    @include for-max-width-tabled {
+        font-size: 8px;
+    }
+}
+
+.copyCard div {
+    display: flex;
+    gap: 15px;
+}
+
+.warning {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-top: 10px;
+
+    span {
+        @include for-max-width-tabled {
+            font-size: 14px;
+        }
+    }
+}
+
+.withDraw {
+    border: 0.5px solid #494D66;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+
+.apv {
+    padding-top: 40px;
+}
+
+
+.inputGroup input {
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+    @include for-max-width-tabled {
+        width: 100%;
+    }
+}
+
+.inputGroup div span:first-child {
+    margin-right: 20px;
+    background: linear-gradient(90.1deg, #FA02FF 4.35%, #00A5AC 101.75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.inputGroup div span:last-child {
+    color: #152DFF;
+}
+
+.inputGroup input::placeholder {
+    color: #9B9B9B;
+}
+
+.numberGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    column-gap: 10px;
+    height: 126px;
+    overflow-y: scroll;
+    background: #F8F8FA;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.numberGroup p {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(73, 77, 102, 0.08);
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    background: #fff;
+    position: relative;
+}
+
+.numberGroup p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: .8px solid transparent;
+    background: linear-gradient(45deg, #FA02FF, #06D6DF) border-box;
+    mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.amountCard {
+    background: #FFFFFF;
+    border: 0.5px solid #494d6690;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 60px;
+}
+
+.amountCard input {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    background: transparent;
+
+    @include for-max-width-tabled {
+        width: 100%;
+    }
+}
+.amountCard div span {
+    color: #152DFF;
+    margin-right: 15px;
+
+    @include for-max-width-tabled {
+        font-size: 14px;
+    }
+}

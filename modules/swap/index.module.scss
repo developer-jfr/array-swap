@@ -1,0 +1,256 @@
+@import '../../styles/variables/mixins.scss';
+
+.marketWrapp {
+    background: #2B2D3C;
+    padding-left: 15.5%;
+    padding-top: 30px;
+    padding-bottom: 100px;
+
+    @include for-max-width-desktop {
+        padding-left: 2%;
+    }
+
+    @include for-max-width-tabled {
+        padding-bottom: 40px;
+    }
+}
+
+
+.statNaming span {
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #6D7399;
+}
+
+.statNaming p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A3ADE6;
+}
+
+.transactionMain {
+    width: 100%;
+
+    @include for-max-width-desktop {
+        padding-inline: 5%;
+    }
+}
+
+.transactionWrapp {
+    margin-top: -50px;
+    margin-bottom: 150px;
+    margin-left: 15.5%;
+    width: 860px;
+    padding: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(47, 49, 66, 0.1);
+    border-radius: 10px;
+
+    @include for-max-width-desktop {
+        width: 100%;
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    @include for-max-width-tabled {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 10px;
+    }
+
+}
+
+
+
+.transactionNaming h2 {
+    font-weight: 500;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #2B2D3C;
+
+    @include for-max-width-desktop {
+        font-size: 20px;
+    }
+}
+
+
+.transactionNaming p {
+    font-size: 20px;
+    color: #494D66;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+
+    @include for-max-width-desktop {
+        font-size: 15px;
+    }
+}
+
+
+.inputWrapp {
+    display: flex;
+    align-items: center;
+    border: 0.1px solid #494d66af;
+    border-radius: 10px;
+    z-index: 2;
+    padding: 20px;
+    margin-bottom: 40px;
+
+    @include for-max-width-tabled {
+        padding: 10px;
+    }
+}
+
+.inputWrapp input,
+.secondInputGroup input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 32px;
+}
+
+.inputWrapp input::placeholder,
+.secondInputGroup input::placeholder {
+    color: #9B9B9B;
+    font-weight: 500;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+
+    @include for-max-width-tabled {
+        font-size: 20px;
+    }
+}
+
+.inputWrapp div,
+.secondInputGroup div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 60px;
+    gap: 5px;
+    background: #F8F8FA;
+    border: 0.5px solid #B8BACC;
+    border-radius: 10px;
+    width: fit-content;
+
+    @include for-max-width-tabled {
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+.secondInputWrapp {
+
+    display: flex;
+    flex-direction: column;
+    border: 0.1px solid #494d66af;
+    border-radius: 10px;
+    z-index: 2;
+    padding: 20px;
+    margin-bottom: 40px;
+
+    @include for-max-width-tabled {
+        border: none;
+        padding: 0;
+    }
+}
+
+.secondInputGroup {
+    display: flex;
+    justify-content: space-between;
+
+    @include for-max-width-tabled {
+        border: 0.1px solid #494d66af;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
+
+.secondNumberGroup {
+    margin-top: 30px;
+    background: #F8F8FA;
+    border: 0.5px solid #B8BACC;
+    border-radius: 8px;
+    padding-block: 15px;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+
+    div {
+        display: flex;
+    }
+}
+
+.secondNumbers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(73, 77, 102, 0.08);
+        border-radius: 4px;
+        padding: 10px 15px;
+        color: #6D7399;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        position: relative;
+
+        &:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 4px;
+            border: .5px solid transparent;
+            background: linear-gradient(45deg, #FA02FF, #06D6DF) border-box;
+            mask:
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+        }
+
+        @include for-max-width-tabled {
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+    }
+
+    @include for-max-width-desktop {
+        flex-wrap: wrap;
+    }
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+
+    span {
+        color: #806DEF;
+        font-weight: 500;
+        font-size: 18px;
+
+        @include for-max-width-tabled {
+            font-size: 16px;
+        }
+    }
+
+    @include for-max-width-tabled {
+        padding-left: 0 !important;
+    }
+}
+
+.paddingLeft {
+    padding-left: 10% !important;
+
+    @include for-max-width-desktop {
+        padding-left: 0 !important;
+    }
+}

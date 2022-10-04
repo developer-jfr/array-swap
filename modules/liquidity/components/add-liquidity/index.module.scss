@@ -1,0 +1,142 @@
+@import '../../../../styles/variables/mixins.scss';
+
+.wrapper {
+    width: 640px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(47, 49, 66, 0.1);
+    border-radius: 10px;
+
+    @include for-max-width-tabled {
+        width: 100%;
+        margin-inline: 10px;
+    }
+}
+
+.liquidityNaming {
+    padding: 30px;
+    border-bottom: 1px solid #E4E4E6;
+
+    @include for-max-width-tabled {
+        padding: 20px;
+    }
+}
+
+.liquidityNaming h2 {
+    color: #313344;
+    font-weight: 700;
+    font-size: 20px;
+
+    @include for-max-width-tabled {
+        font-size: 16px;
+    }
+}
+
+
+.liquidityNaming p {
+    @include for-max-width-tabled {
+        font-size: 14px;
+    }
+}
+
+.validWrapp {
+    padding: 30px;
+
+    @include for-max-width-tabled {
+        padding: 20px;
+    }
+}
+
+
+.validWrapp h2 {
+    color: #2E3041;
+    font-weight: 500;
+    font-size: 20px;
+
+    @include for-max-width-tabled {
+        font-size: 16px;
+    }
+}
+
+.validGroup {
+    padding-inline: 15%;
+    padding-top: 20px;
+
+    @include for-max-width-tabled {
+        padding-inline: 0;
+    }
+}
+
+.validSelectGroup {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+    @include for-max-width-tabled {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.cryptoSelect {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 0.5px solid #494d666f;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    @include for-max-width-tabled {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.cryptoSelect img {
+    margin-left: 70px;
+}
+
+.cryptoSelect  span {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #494D66;
+
+}
+
+
+.cryptoSelect p {
+  @include for-max-width-tabled {
+    display: none;
+  }
+}
+
+.liquidityFooter {
+    margin-top: 40px;
+    background: #F3F3F5;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #737373;
+    padding: 30px;
+
+    @include for-max-width-tabled {
+        padding: 10px;
+    }
+}
+
+.item {
+    @include for-max-width-tabled {
+        display: none;
+    }
+}
+
+.mobileItem {
+    display: none;
+
+    @include for-max-width-tabled {
+        display: block;
+    }
+}

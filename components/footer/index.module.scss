@@ -1,0 +1,46 @@
+@import '../../styles/variables/mixins.scss';
+
+.customNavbar {
+    background: #2B2D3C;
+}
+
+.footerBrank {
+    padding-block: 15px;
+    padding-inline: 50px;
+    padding-right: 0;
+    @include for-max-width-desktop {
+        padding-inline: 10px;
+        padding-left: 20px;
+    }
+}
+
+
+.footerItem {
+    padding-inline: 1.5rem;
+}
+
+
+.footerItem a {
+    color: #fff !important;
+    @include for-max-width-fullHd {
+        font-size: 10px;
+    }
+
+    @include for-max-width-desktop {
+        font-size: 16px;
+    }
+}
+
+
+.footerItem a:hover {
+    opacity: 0.7;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+    @include for-max-width-desktop {
+        display: block;
+    }
+}

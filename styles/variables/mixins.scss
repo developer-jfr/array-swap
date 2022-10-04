@@ -1,0 +1,27 @@
+@import './resolution';
+
+@mixin for-max-width-fullHd {
+  @media only screen and (max-width: $fullHd) {
+    @content;
+  }
+}
+
+@mixin for-max-width-desktop {
+  @media only screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin for-max-width-tabled {
+  @media only screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin for-max-width-mobile {
+  @media only screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+

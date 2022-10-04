@@ -1,0 +1,35 @@
+@import '../../styles/variables/mixins.scss';
+
+.customNavbar {
+    background: #2B2D3C;
+    padding-block: 10px;
+    padding-inline: 50px;
+    border-bottom: 1px solid #494D66;
+    @include for-max-width-desktop {
+        padding-inline: 10px;
+        padding-left: 20px;
+    }
+}
+
+.navbarItem a {
+    color: #D9D9D9;
+    font-size: 15px;
+}
+
+
+
+.navbarItem a:hover {
+    position: relative;
+    color: #F1F1F3;
+    font-weight: 600;
+}
+
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+    @include for-max-width-desktop {
+        display: block;
+    }
+}
