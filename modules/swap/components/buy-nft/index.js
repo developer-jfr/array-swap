@@ -22,7 +22,7 @@ const BuyNft = ({ setShowNft , isInline, setIsInline}) => {
             <span>Clear</span>
             <Image
               className={`is-clickable ${isInline && classes.isInline}`}
-              onClick={() => setIsInline(el => !el)}
+             
               src={Grid}
               height={24}
               width={24}
