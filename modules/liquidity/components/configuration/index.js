@@ -6,11 +6,11 @@ const Copy = "/assets/images/icons/copy.svg";
 const Share = "/assets/images/icons/share.svg";
 const Warning = "/assets/images/icons/warning.svg";
 
-const Configuration = () => {
+const Configuration = ({setIsConfiguration}) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.arrowSection}>
-        <Image src={ArrowLeft} height={20} width={20} />
+        <Image className="is-clickable" onClick={() => setIsConfiguration(false)} src={ArrowLeft} height={20} width={20} />
         <div>
           <h2>Configurations</h2>
           <p>Pool Confugarations</p>

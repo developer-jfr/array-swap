@@ -9,11 +9,17 @@ import RemoveLiquidity from "./components/remove-liquidity";
 import Configuration from "./components/configuration";
 import LiquidityWallet from "./components/liquidity-wallet";
 import TokenSelect from '../../components/select';
+import { useAccount } from "wagmi";
+import { useState } from "react";
 
 
 const Statisticks = "/assets/images/icons/statisticks.svg";
 
 const Liquidity = () => {
+  const [ isConfiguration, setIsConfiguration ] = useState(false);
+  const [ addLiquity, setIsAddLiquidity ] = useState(false);
+  const { isConnected } = useAccount();
+
   return (
     <div>
       <div className={classes.marketWrapp}>
@@ -31,7 +37,9 @@ const Liquidity = () => {
          {/*  <AddLiquitidy />
          {/* <RemoveLiquidity /> */}
       {/*  <Configuration /> */}
-      <LiquidityWallet />
+      {isConnected ? (
+        isConfiguration ? <Configuration setIsConfiguration={setIsConfiguration} />: addLiquity ? <AddLiquitidy  /> : <RemoveLiquidity setIsConfiguration={setIsConfiguration}  setIsAddLiquidity={setIsAddLiquidity} />
+      ) : <LiquidityWallet />}
       </div>
     </div>
   );
