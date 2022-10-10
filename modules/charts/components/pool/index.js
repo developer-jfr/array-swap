@@ -1,5 +1,7 @@
 import Image from "next/image";
 import classes from "./index.module.scss";
+import truncateHash from './../../../../utils/truncate';
+
 
 const Share = "/assets/images/icons/share.svg";
 const Copy = "/assets/images/icons/copy.svg";

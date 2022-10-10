@@ -56,7 +56,7 @@ const TokenSelect = () => {
           )}
         </div>
       </div>
-      {showOptions && <div className={classes.bigBg}></div>}
+      {showOptions && <div onClick={() => setShowOptions(false)} className={classes.bigBg}></div>}
     </div>
   );
 };

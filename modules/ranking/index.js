@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import classes from "./index.module.scss";
+import Router from 'next/router';
 
 const increateIcon = "/assets/images/icons/select-3.svg";
 const selectBlack = "/assets/images/icons/select-black-2.svg";
@@ -127,7 +128,7 @@ const Ranking = () => {
             </tr>
           </thead>
           <tbody className={classes.customBody}>
-            <tr>
+            <tr onClick={() => Router.push('/selected-chart')}>
               <th>
                 <div>1</div>
               </th>
@@ -160,7 +161,7 @@ const Ranking = () => {
               <td>Items</td>
               <td>Pools</td>
             </tr>
-            <tr>
+            <tr onClick={() => Router.push('/selected-chart')}>
               <th>2</th>
               <td>
                 <div>
@@ -191,7 +192,7 @@ const Ranking = () => {
               <td>Items</td>
               <td>Pools</td>
             </tr>
-            <tr>
+            <tr onClick={() => Router.push('/selected-chart')}>
               <th>3</th>
               <td>
                 <div>
@@ -222,7 +223,7 @@ const Ranking = () => {
               <td>Items</td>
               <td>Pools</td>
             </tr>
-            <tr>
+            <tr onClick={() => Router.push('/selected-chart')}>
               <th>4</th>
               <td>
                 <div>

@@ -107,7 +107,7 @@ const NavBar = ({burgerOpen, setBurgerOpen}) => {
           <div className="navbar-item">
             <div className={`buttons ${classes.buttonGroup}`}>
               <button className={classes.customBtn}>$ARS on Uniswap</button>
-              <LinearButton  /> 
+              <LinearButton link={'/swap'}  /> 
             </div>
           </div>
         </div>

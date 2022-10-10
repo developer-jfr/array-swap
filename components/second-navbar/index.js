@@ -2,18 +2,23 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
-import ConnectedWallet from "../buttons/connectedWallet";
+import { useEffect, useState } from "react";
+import ConnectedWallet from "../buttons/connectedWalletBtn";
 import LinearButton from "../buttons/linear-button";
+import ConnectWalletModal from "../../components/connectWallet";
 
 import classes from "./index.module.scss";
+import { useAccount } from "wagmi";
 
 const Logo = "/assets/images/svg/logo-white.svg";
 const Hamburger = "/assets/images/icons/hamburger.svg";
 const CloseHanburger = "/assets/images/icons/close-hamburger.svg";
 
 const SecondNavbar = () => {
-  const [burgerOpen, setBurgerOpen]  = useState(false);
+  const [openWallet, setOpenWallet] = useState(false);
+  const [burgerOpen, setBurgerOpen] = useState(false);
+  const { isConnected, address } = useAccount();
+  const [connectWallet, setConnectWallet] = useState(false);
   const router = useRouter();
 
   const menuClasses = classNames("navbar-menu", {
@@ -21,84 +26,113 @@ const SecondNavbar = () => {
   });
 
   let connectedWallet = false;
-  if (
-    router.asPath.includes('swap') 
-  ) {
+  if (router.asPath.includes("swap")) {
     connectedWallet = true;
-  } 
-
+  }
 
   const getIsActive = (curr) => {
     if (router.pathname === curr) {
       return classes.active;
     }
   };
+
   return (
-    <nav className={`navbar ${classes.customNavbar}`} role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
-        <Link  href="/">
-          <Image className="navbar-item is-clickable" src={Logo} height={28} width={140} />
-        </Link>
+    <>
+      {openWallet && <ConnectWalletModal openWallet={openWallet} setOpenWallet={setOpenWallet} />}
+      <nav
+        className={`navbar ${classes.customNavbar}`}
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div className="navbar-brand">
+          <Link href="/">
+            <Image
+              className="navbar-item is-clickable"
+              src={Logo}
+              height={28}
+              width={140}
+            />
+          </Link>
 
-        <a
-          role="button"
-          className="navbar-burger  is-flex is-justify-content-center is-align-items-center "
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
+          <a
+            role="button"
+            className="navbar-burger  is-flex is-justify-content-center is-align-items-center "
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            {burgerOpen ? (
+              <img
+                className={classes.icon}
+                src={CloseHanburger}
+                onClick={() => setBurgerOpen(false)}
+                alt="CloseHanburger"
+              />
+            ) : (
+              <img
+                className={classes.icon}
+                onClick={() => setBurgerOpen(true)}
+                src={Hamburger}
+                alt="Hamburger"
+              />
+            )}
+          </a>
+        </div>
+
+        <div
+          id="navbarBasicExample"
+          className={`${menuClasses} ${classes.navbarMenu}`}
         >
-           {burgerOpen ? (
-            <img
-              className={classes.icon}
-              src={CloseHanburger}
-              onClick={() => setBurgerOpen(false)}
-              alt="CloseHanburger"
-            />
-          ) : (
-            <img
-              className={classes.icon}
-              onClick={() => setBurgerOpen(true)}
-              src={Hamburger}
-              alt="Hamburger"
-            />
-          )}
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" className={`${menuClasses} ${classes.navbarMenu}`}>
-        <div className={`navbar-start ml-5 pl-5 ${classes.navbarStart}`} style={{gap: '5px'}}>
-          <div className={`navbar-item ${classes.navbarItem} ${getIsActive('/swap')}`}>
-            <Link href='/swap' >
-              <a onClick={() => setBurgerOpen(false)} >
-              SWAP
-              </a>
-             </Link>
-          </div>
-          <div style={{pointerEvents: 'none'}} className={`navbar-item ${classes.navbarItem}`}>
-            <Link href='/pool' >
-              POOL
-             </Link>
-          </div>
-          <div className={`navbar-item ${classes.navbarItem} ${getIsActive('/charts')}`}>
-            <Link href='/charts' >
-             <a onClick={() => setBurgerOpen(false)}>
-             CHARTS
-             </a>
-             </Link>
-          </div>
-        </div>
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="buttons">
-           
-            <div>
-            {connectedWallet ? <ConnectedWallet />  : <LinearButton text="Connect Wallet" /> }
+          <div
+            className={`navbar-start ml-5 pl-5 ${classes.navbarStart}`}
+            style={{ gap: "5px" }}
+          >
+            <div
+              className={`navbar-item ${classes.navbarItem} ${getIsActive(
+                "/swap"
+              )}`}
+            >
+              <Link href="/swap">
+                <a onClick={() => setBurgerOpen(false)}>SWAP</a>
+              </Link>
             </div>
+            <div
+             className={`navbar-item ${classes.navbarItem} ${getIsActive(
+              "/pool"
+            )}`}
+            >
+              <Link href="/pool">POOL</Link>
+            </div>
+            <div
+              className={`navbar-item ${classes.navbarItem} ${getIsActive(
+                "/charts"
+              )}`}
+            >
+              <Link href="/charts">
+                <a onClick={() => setBurgerOpen(false)}>CHARTS</a>
+              </Link>
+            </div>
+          </div>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons">
+                <div>
+                  {isConnected ? (
+                    <ConnectedWallet text={address} />
+                  ) : (
+                    <LinearButton
+                      text="Connect Wallet"
+                      setOpenWallet={setOpenWallet}
+                      link="#"
+                    />
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 

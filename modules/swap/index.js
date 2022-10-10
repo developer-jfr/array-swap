@@ -17,6 +17,8 @@ const Settings = "/assets/images/svg/settings.svg";
 
 const Swap = () => {
   const [showSettings, setShowSettings] = useState(false);
+  const [ isInline, setIsInline ] = useState(false);
+
   const [showToken, setShowToken] = useState(false);
   const [showNft, setShowNft] = useState(false);
 
@@ -27,7 +29,7 @@ const Swap = () => {
         <TransactionSettings setShowSettings={setShowSettings} />
       )}
       <div
-        className={`${classes.marketWrapp} ${showNft && classes.paddingLeft}`}
+        className={`${classes.marketWrapp} ${showNft && !isInline ? classes.paddingLeft : ''}`}
       >
         <TokenSelect />
         <div className="is-flex ml-3 mt-5 pt-2">
@@ -65,7 +67,6 @@ const Swap = () => {
             <div className="is-flex is-justify-content-center is-align-items-center pb-5">
               <Image
                 className="is-clickable"
-                onClick={() => setShowNft(true)}
                 src={ArrowDownWithoutLine}
                 height={14}
                 width={14}
@@ -87,7 +88,7 @@ const Swap = () => {
                       <span key={el}>{el}</span>
                     ))}
                   </div>
-                  <div className={classes.more}>
+                  <div className={`is-clickable ${classes.more}`} onClick={() => setShowNft(true)}>
                     <span>More</span>
                     <Image src={SmallArrowRight} height={10} width={10} />
                   </div>
@@ -97,7 +98,7 @@ const Swap = () => {
             <LinearButton text="Connect wallet" width="100%" padding="24px 0" />
           </div>
         </div>
-        {showNft && <BuyNft setShowNft={setShowNft} />}
+        {showNft && <BuyNft setIsInline={setIsInline} isInline={isInline} setShowNft={setShowNft} />}
       </div>
     </div>
   );

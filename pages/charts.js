@@ -1,9 +1,9 @@
-import { ChartsModule } from "../modules"
+import { RankingModule } from "../modules"
 
-const Charts = () => {
+const RankingMain = () => {
   return (
-    <ChartsModule />
+    <RankingModule />
   )
 }
 
-export default Charts
+export default RankingMain
