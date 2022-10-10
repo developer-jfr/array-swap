@@ -49,10 +49,10 @@ const Page = ({ children }) => {
   let renderNavbar = false;
   let renderRankingNav = false;
   if (
-    router.asPath.includes('pool') || router.asPath.includes('swap') || router.asPath.includes('charts') || router.asPath.includes('selected-chart')
+    router.asPath.includes('pool') || router.asPath.includes('swap') || router.asPath.includes('selected-chart')
   ) {
     renderNavbar = true;
-  } else if (router.asPath.includes('ranking')) {
+  } else if (router.asPath.includes('charts')) {
     renderRankingNav = true
     }
   return (
