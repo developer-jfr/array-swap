@@ -58,7 +58,7 @@ const Footer = ({burgerOpen, setBurgerOpen}) => {
       </div>
 
       <div id="navbarBasicExample" className='navbar-menu'>
-        <div className="navbar-start" style={{marginLeft: 'auto', marginRight: 0}}>
+        <div className="navbar-start" >
         <div className={`navbar-item ${classes.footerItem}`}>
             <Link href='/' >
             Medium
@@ -88,14 +88,6 @@ const Footer = ({burgerOpen, setBurgerOpen}) => {
             <Link href='/' >
             Github
             </Link>
-          </div>
-        </div>
-        <div className="navbar-end">
-         
-          <div className="navbar-item">
-            <div className="buttons">
-              <LinearButton />
-            </div>
           </div>
         </div>
       </div>

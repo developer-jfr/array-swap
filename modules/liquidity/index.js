@@ -18,6 +18,7 @@ const Statisticks = "/assets/images/icons/statisticks.svg";
 const Liquidity = () => {
   const [ isConfiguration, setIsConfiguration ] = useState(false);
   const [ addLiquity, setIsAddLiquidity ] = useState(false);
+  const [ chooseValid, setChooseValid ] = useState(false)
   const { isConnected } = useAccount();
 
   return (
@@ -33,12 +34,8 @@ const Liquidity = () => {
         </div>
       </div>
       <div className={`is-flex is-justify-content-center ${classes.liquidityWrapp}`}>
-         {/* <ChooseValid /> */}
-         {/*  <AddLiquitidy />
-         {/* <RemoveLiquidity /> */}
-      {/*  <Configuration /> */}
       {isConnected ? (
-        isConfiguration ? <Configuration setIsConfiguration={setIsConfiguration} />: addLiquity ? <AddLiquitidy  /> : <RemoveLiquidity setIsConfiguration={setIsConfiguration}  setIsAddLiquidity={setIsAddLiquidity} />
+        isConfiguration ? <Configuration setIsConfiguration={setIsConfiguration} />: addLiquity ? (chooseValid ? <ChooseValid setChooseValid={setChooseValid} /> : <AddLiquitidy  setChooseValid={setChooseValid} />)  : <RemoveLiquidity setIsConfiguration={setIsConfiguration}  setIsAddLiquidity={setIsAddLiquidity} />
       ) : <LiquidityWallet />}
       </div>
     </div>

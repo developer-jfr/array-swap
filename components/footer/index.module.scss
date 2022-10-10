@@ -22,10 +22,6 @@
 
 .footerItem a {
     color: #fff !important;
-    @include for-max-width-fullHd {
-        font-size: 10px;
-    }
-
     @include for-max-width-desktop {
         font-size: 16px;
     }

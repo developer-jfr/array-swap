@@ -14,14 +14,14 @@ const BuyNft = ({ setShowNft , isInline, setIsInline}) => {
     query: '(max-width: 1400px)'
   })
   return (
-    <div className={`${classes.container} ${isInline  && !isDesktop ? classes.sidepabelInline : ''}`}>
+    <div  onClick={() => setIsInline(el => !el)} className={`${classes.container} ${isInline  && !isDesktop ? classes.sidepabelInline : ''}`}>
       <div className={classes.modalBody}>
         <div className={classes.headerWrapp}>
           <h2>Buy 5 NFT’s</h2>
           <div>
             <span>Clear</span>
             <Image
-              className="is-clickable"
+              className={`is-clickable ${isInline && classes.isInline}`}
               onClick={() => setIsInline(el => !el)}
               src={Grid}
               height={24}

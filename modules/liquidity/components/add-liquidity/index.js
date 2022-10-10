@@ -5,7 +5,7 @@ import classes from "./index.module.scss";
 const selectDown = "/assets/images/icons/select-down-2.svg";
 const EtherumBlack = "/assets/images/icons/black-ethrerum.svg";
 
-const AddLiquitidy = () => {
+const AddLiquitidy = ({setChooseValid}) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.liquidityNaming}>
@@ -42,7 +42,9 @@ const AddLiquitidy = () => {
             </div>
           </div>
         </div>
+        <div onClick={() => setChooseValid(true)}> 
         <LinearButton text="+ Add Liquidity" width="100%" />
+        </div>
         </div>
       </div>
       <div className={classes.liquidityFooter}>

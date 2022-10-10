@@ -6,12 +6,12 @@ const ArrowLeft = "/assets/images/icons/arrow-left.svg";
 const SquarePlus = "/assets/images/icons/square-plus.svg";
 const SquareDelete = "/assets/images/icons/square-delete.svg";
 
-const ChooseValid = () => {
+const ChooseValid = ({setChooseValid}) => {
   return (
     <div className="is-flex is-flex-direction-column">
     <div className={classes.container}>
       <div className={classes.arrowSection}>
-        <Image src={ArrowLeft} height={20} width={20} />
+        <Image className="is-clickable" onClick={() => setChooseValid(false)} src={ArrowLeft} height={20} width={20} />
         <div>
           <h2>Your Liquidity</h2>
           <p>Receive LP tokens and earn 0.17% trading fees</p>

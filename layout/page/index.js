@@ -2,7 +2,6 @@ import Navbar from "./../../components/nav-bar";
 import Footer from "./../../components/footer";
 import { useRouter } from "next/router";
 import SecondNavbar from "../../components/second-navbar";
-import RankingNavbar from "../../components/ranking-navbar";
 import { useState } from "react";
 import {
   WagmiConfig,
@@ -47,17 +46,14 @@ const Page = ({ children }) => {
   const router = useRouter();
 
   let renderNavbar = false;
-  let renderRankingNav = false;
   if (
-    router.asPath.includes('pool') || router.asPath.includes('swap') || router.asPath.includes('selected-chart')
+    router.asPath.includes('pool') || router.asPath.includes('swap') || router.asPath.includes('selected-chart') ||  router.asPath.includes('charts')
   ) {
     renderNavbar = true;
-  } else if (router.asPath.includes('charts')) {
-    renderRankingNav = true
-    }
+  } 
   return (
     <WagmiConfig client={client}>
-      {renderNavbar ? <SecondNavbar /> : renderRankingNav ? <RankingNavbar /> :  <Navbar burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen}  /> }
+      {renderNavbar ? <SecondNavbar /> :  <Navbar burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen}  /> }
       {children}
       <Footer burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
     </WagmiConfig>
