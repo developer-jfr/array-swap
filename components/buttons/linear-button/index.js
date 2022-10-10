@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import classes from './index.module.scss';
 
-const LinearButton = ({text = 'Launch App', bG, width, padding, link, setOpenWallet}) => {
+const LinearButton = ({text = 'Launch App', bG, width, padding, link= '#', setOpenWallet}) => {
   return (
     <Link href={`${link}`}>
            <button onClick={() => {
