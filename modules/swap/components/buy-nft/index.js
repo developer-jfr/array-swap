@@ -8,11 +8,15 @@ const Grid = "/assets/images/icons/grid.svg";
 const Grow = "/assets/images/icons/grow.svg";
 const Turtle = "/assets/images/svg/tutle.svg";
 const ArrowLeftWithoutLine = "/assets/images/icons/arrow-left-without-line.svg";
+const HiX = "/assets/images/icons/hix.svg";
 
 const BuyNft = ({ setShowNft , isInline, setIsInline, showNft}) => {
   const isDesktop = useMediaQuery({
     query: '(max-width: 900px)'
-  })
+  });
+  const isMobileScreeen = useMediaQuery({
+    query: '(max-width: 500px)'
+  });
   return (
     <>
     <div onClick={() => setShowNft(false)} className={showNft && isInline ? classes.inlineBg : ''}></div>
@@ -22,13 +26,23 @@ const BuyNft = ({ setShowNft , isInline, setIsInline, showNft}) => {
           <h2>Buy 5 NFT’s</h2>
           <div>
             <span>Clear</span>
-            <Image
+            {isMobileScreeen ? (
+              <Image
               className={`is-clickable ${isInline && classes.isInline}`}
-              onClick={() => setIsInline(el => !el)} 
-              src={Grid}
-              height={24}
-              width={24}
-            />
+              onClick={() => setShowNft(false)} 
+              src={HiX}
+              height={16}
+              width={16} />
+            )
+           : (
+              <Image
+            className={`is-clickable ${isInline && classes.isInline}`}
+            onClick={() => setIsInline(el => !el)} 
+            src={Grid}
+            height={24}
+            width={24}
+          />)
+}     
           </div>
         </div>
         <div className={classes.totalWrapp}>
