@@ -6,8 +6,21 @@
   }
 }
 
+@mixin for-max-width-desktop1200 {
+  @media only screen and (max-width: $desktop1200) {
+    @content;
+  }
+}
+
+
 @mixin for-max-width-desktop {
   @media only screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin for-max-width-fullTabled {
+  @media only screen and (max-width: $fullTabled) {
     @content;
   }
 }

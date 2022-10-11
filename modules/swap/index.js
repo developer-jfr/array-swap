@@ -40,9 +40,9 @@ const Swap = () => {
           </div>
         </div>
       </div>
-      <div className="is-flex" style={{ background: "#F1F1F3", gap: "20px" }}>
-        <div className={classes.transactionMain}>
-          <div className={`${classes.transactionWrapp} ${showNft && classes.transactionWrappActive}`}>
+      <div className={`is-flex ${classes.inlineWrapp}`} style={{ background: "#F1F1F3"}}>
+        <div className={`${classes.transactionMain} ${showNft && classes.mainInline}`}>
+          <div className={`${classes.transactionWrapp} ${showNft && classes.transactionWrappActive} ${isInline && classes.isInline}`}>
             <div className="is-flex is-justify-content-end mb-3">
               <Image
                 onClick={() => setShowSettings(true)}

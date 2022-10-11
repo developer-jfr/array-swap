@@ -4,7 +4,7 @@
     width: 690px;
     height: 100%;
 
-    @include for-max-width-fullHd {
+    @include for-max-width-fullTabled {
         position: fixed;
         left: 50%;
         top: 50%;
@@ -135,7 +135,7 @@
 .isInline {
     filter: grayscale(1);
 
-    @include for-max-width-fullHd {
+    @include for-max-width-fullTabled {
         filter: grayscale(0);
     }
 }

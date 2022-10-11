@@ -11,7 +11,7 @@ const ArrowLeftWithoutLine = "/assets/images/icons/arrow-left-without-line.svg";
 
 const BuyNft = ({ setShowNft , isInline, setIsInline, showNft}) => {
   const isDesktop = useMediaQuery({
-    query: '(max-width: 1400px)'
+    query: '(max-width: 900px)'
   })
   return (
     <>
