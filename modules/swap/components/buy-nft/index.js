@@ -15,7 +15,7 @@ const BuyNft = ({ setShowNft , isInline, setIsInline, showNft}) => {
     query: '(max-width: 900px)'
   });
   const isMobileScreeen = useMediaQuery({
-    query: '(max-width: 500px)'
+    query: '(max-width: 600px)'
   });
   return (
     <>

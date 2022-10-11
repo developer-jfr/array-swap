@@ -6,16 +6,11 @@
 
     @include for-max-width-fullTabled {
         position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #7e808b82;
+        left: 0;
+        top: 10%;
         width: 100%;
-        height: 100%;
         z-index: 990;
-        display: grid;
-        align-items: flex-end;
-        margin-bottom: 10px;
+    
     }
 }
 
