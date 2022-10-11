@@ -98,7 +98,7 @@ const Swap = () => {
             <LinearButton text="Connect wallet" width="100%" padding="24px 0" />
           </div>
         </div>
-        {showNft && <BuyNft setIsInline={setIsInline} isInline={isInline} setShowNft={setShowNft} />}
+        {showNft && <BuyNft setIsInline={setIsInline} showNft={showNft} isInline={isInline} setShowNft={setShowNft} />}
       </div>
     </div>
   );

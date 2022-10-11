@@ -6,16 +6,12 @@
 
     @include for-max-width-fullHd {
         position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #7e808b82;
-        width: 100%;
-        height: 100%;
-        z-index: 990;
-        display: grid;
-        align-items: flex-end;
-        margin-bottom: 10px;
+    top: 10%;
+    right: 0;
+    background-color: #7e808b82;
+    width: 500px;
+    height: 100%;
+    z-index: 990;
     }
 }
 
@@ -124,18 +120,24 @@
 
 .sidepabelInline {
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 10%;
+    right: 0;
     background-color: #7e808b82;
-    width: 100%;
+    width: 500px;
     height: 100%;
     z-index: 990;
-    display: grid;
-    align-items: flex-end;
-    margin-bottom: 10px;
 }
 
 .isInline {
     filter: grayscale(1);
+}
+
+.inlineBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(50, 53, 70, 0.6);
+    z-index: 2;
 }

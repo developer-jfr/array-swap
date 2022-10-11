@@ -9,12 +9,14 @@ const Grow = "/assets/images/icons/grow.svg";
 const Turtle = "/assets/images/svg/tutle.svg";
 const ArrowLeftWithoutLine = "/assets/images/icons/arrow-left-without-line.svg";
 
-const BuyNft = ({ setShowNft , isInline, setIsInline}) => {
+const BuyNft = ({ setShowNft , isInline, setIsInline, showNft}) => {
   const isDesktop = useMediaQuery({
     query: '(max-width: 1400px)'
   })
   return (
-    <div  onClick={() => setIsInline(el => !el)} className={`${classes.container} ${isInline  && !isDesktop ? classes.sidepabelInline : ''}`}>
+    <>
+    <div onClick={() => setShowNft(false)} className={showNft && isInline ? classes.inlineBg : ''}></div>
+      <div className={`${classes.container} ${isInline  && !isDesktop ? classes.sidepabelInline : ''}`}>
       <div className={classes.modalBody}>
         <div className={classes.headerWrapp}>
           <h2>Buy 5 NFT’s</h2>
@@ -22,7 +24,7 @@ const BuyNft = ({ setShowNft , isInline, setIsInline}) => {
             <span>Clear</span>
             <Image
               className={`is-clickable ${isInline && classes.isInline}`}
-             
+              onClick={() => setIsInline(el => !el)} 
               src={Grid}
               height={24}
               width={24}
@@ -58,6 +60,7 @@ const BuyNft = ({ setShowNft , isInline, setIsInline}) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
