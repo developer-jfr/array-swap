@@ -40,9 +40,7 @@
 .transactionMain {
     width: 100%;
 
-
-    
-    @include for-max-width-desktop1200 {
+    @include for-max-width-fullHd {
         padding-inline: 5%;
     }
 }
@@ -65,11 +63,10 @@
 
     @include for-max-width-fullHd {
         margin-left: 0;
-        margin-inline: 5%;
+        width: 100%;
     }
 
     @include for-max-width-desktop1200 {
-        width: 100%;
         margin-left: 0;
     }
 
