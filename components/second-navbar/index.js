@@ -9,6 +9,7 @@ import ConnectWalletModal from "../../components/connectWallet";
 
 import classes from "./index.module.scss";
 import { useAccount } from "wagmi";
+import { useMediaQuery } from "react-responsive";
 
 const Logo = "/assets/images/svg/logo-white.svg";
 const Hamburger = "/assets/images/icons/hamburger.svg";
@@ -18,12 +19,15 @@ const SecondNavbar = () => {
   const [openWallet, setOpenWallet] = useState(false);
   const [burgerOpen, setBurgerOpen] = useState(false);
   const { isConnected, address } = useAccount();
+  const isNavbarShow = useMediaQuery({ query: '(max-width: 1023px)' })
+ 
   const [connectWallet, setConnectWallet] = useState(false);
   const router = useRouter();
 
   const menuClasses = classNames("navbar-menu", {
     ["is-active"]: burgerOpen,
   });
+
 
   let connectedWallet = false;
   if (router.asPath.includes("swap")) {
@@ -116,7 +120,7 @@ const SecondNavbar = () => {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <div>
+                <div style={{width: '100%'}} className={`${isNavbarShow && 'is-flex is-justify-content-center'}`} >
                   {isConnected ? (
                     <ConnectedWallet text={address} />
                   ) : (
