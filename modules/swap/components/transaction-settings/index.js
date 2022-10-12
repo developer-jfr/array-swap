@@ -6,7 +6,7 @@ const HiX  = '/assets/images/icons/hix.svg'
 const TransactionSettings = ({setShowSettings}) => {
   return (
     <div className={`modal is-active ${classes.modal}`}>
-      <div className="modal-background" style={{background: 'rgba(50, 53, 70, 0.6)'}}></div>
+      <div onClick={() => setShowSettings(false)} className="modal-background" style={{background: 'rgba(50, 53, 70, 0.6)'}}></div>
       <div className={`modal-card ${classes.modalCard}`}>
         <header className={`modal-card-head ${classes.modalHeader}`}>
           <p className="modal-card-title">Transaction settings</p>

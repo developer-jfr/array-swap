@@ -12,6 +12,7 @@ const SelectToken = ({ setShowToken }) => {
       <div
         className="modal-background"
         style={{ background: "rgba(50, 53, 70, 0.6)" }}
+        onClick={() => setShowToken(false)}
       ></div>
       <div className={`modal-card ${classes.modalCard}`}>
         <header className={`modal-card-head ${classes.modalHeader}`}>
