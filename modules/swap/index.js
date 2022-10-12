@@ -88,7 +88,10 @@ const Swap = () => {
                       <span key={el}>{el}</span>
                     ))}
                   </div>
-                  <div className={`is-clickable ${classes.more}`} onClick={() => setShowNft(true)}>
+                  <div className={`is-clickable ${classes.more}`} onClick={() => {
+                    setShowNft(true);
+                    setIsInline(true);
+                  }}>
                     <span>More</span>
                     <Image src={SmallArrowRight} height={10} width={10} />
                   </div>
