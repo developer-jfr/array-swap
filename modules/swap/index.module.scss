@@ -257,10 +257,15 @@
             mask-composite: exclude;
         }
 
-        @include for-max-width-tabled {
+        @include for-max-width-desktop {
             padding: 5px 10px;
             font-size: 16px;
         }
+    }
+
+
+    @include for-max-width-desktop {
+        gap: 10px;
     }
 
 }
