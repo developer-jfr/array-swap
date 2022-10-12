@@ -301,6 +301,11 @@
 
 .inlineWrapp {
     gap: 60px;
+     
+    @include for-max-width-desktop1200 {
+        gap: 20px;
+    }
+
 
     @include for-max-width-tabled {
         gap: 5px;
