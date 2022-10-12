@@ -95,25 +95,30 @@ const SecondNavbar = () => {
               className={`navbar-item ${classes.navbarItem} ${getIsActive(
                 "/swap"
               )}`}
+              onClick={() => setBurgerOpen(false)}
             >
               <Link href="/swap">
-                <a onClick={() => setBurgerOpen(false)}>SWAP</a>
+                <a >SWAP</a>
               </Link>
             </div>
             <div
              className={`navbar-item ${classes.navbarItem} ${getIsActive(
               "/pool"
             )}`}
+            onClick={() => setBurgerOpen(false)}
             >
-              <Link href="/pool">POOL</Link>
+              <Link href="/pool" >
+                <a> POOL</a>
+              </Link>
             </div>
             <div
               className={`navbar-item ${classes.navbarItem} ${getIsActive(
                 "/charts"
               )}`}
+              onClick={() => setBurgerOpen(false)}
             >
-              <Link href="/charts">
-                <a onClick={() => setBurgerOpen(false)}>CHARTS</a>
+              <Link href="/charts" >
+                <a >CHARTS</a>
               </Link>
             </div>
           </div>

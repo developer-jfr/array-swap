@@ -16,6 +16,7 @@ const ConnectWallet = ({ setOpenWallet, openWallet }) => {
       <div
         class="modal-background"
         style={{ background: "rgba(50, 53, 70, 0.6)" }}
+        onClick={() => setOpenWallet(false)}
       ></div>
       <div class={`modal-card ${classes.modalCard}`}>
         <div className={`is-flex is-justify-content-end p-5 is-clickable ${classes.modalHeader}`}>

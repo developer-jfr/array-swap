@@ -7,6 +7,7 @@ import { useState } from "react";
 import SelectToken from "./components/select-token";
 import BuyNft from "./components/buy-nft";
 import TokenSelect from "../../components/select";
+import ConnectWalletModal from '../../components/connectWallet';
 
 const SmallArrowRight = "/assets/images/icons/small-arrow-right.svg";
 const EtherumBlack = "/assets/images/icons/black-ethrerum.svg";
@@ -18,6 +19,7 @@ const Settings = "/assets/images/svg/settings.svg";
 const Swap = () => {
   const [showSettings, setShowSettings] = useState(false);
   const [ isInline, setIsInline ] = useState(false);
+  const [ walletModalShow, setWalletModalShow ] = useState(false);
 
   const [showToken, setShowToken] = useState(false);
   const [showNft, setShowNft] = useState(false);
@@ -28,6 +30,7 @@ const Swap = () => {
       {showSettings && (
         <TransactionSettings setShowSettings={setShowSettings} />
       )}
+      {walletModalShow && <ConnectWalletModal />}
       <div
         className={`${classes.marketWrapp} ${showNft && !isInline ? classes.paddingLeft : ''}`}
       >
@@ -98,7 +101,9 @@ const Swap = () => {
                 </div>
               </div>
             </div>
-            <LinearButton text="Connect wallet" width="100%" padding="24px 0" />
+           <div>
+           <LinearButton text="Connect wallet" width="100%" padding="24px 0"  link="#" />
+           </div>
           </div>
         </div>
         {showNft && <BuyNft setIsInline={setIsInline} showNft={showNft} isInline={isInline} setShowNft={setShowNft} />}
