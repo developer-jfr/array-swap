@@ -5,6 +5,7 @@
     padding-block: 10px;
     padding-inline: 50px;
     border-bottom: 1px solid #494D66;
+    z-index: 99;
     @include for-max-width-desktop {
         padding-inline: 10px;
         padding-left: 20px;

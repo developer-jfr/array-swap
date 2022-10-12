@@ -2,12 +2,13 @@
 
 .container {
     width: 690px;
-    height: 900px;
+    height: 1100px;
+    margin-bottom: -100px;
 
     @include for-max-width-fullTabled {
         position: fixed;
         left: 0;
-        top: 20%;
+        top: 30%;
         width: 100%;
         z-index: 990;
     
@@ -119,7 +120,7 @@
 
 .sidepabelInline {
     position: fixed;
-    top: 20%;
+    top: 30%;
     right: 0;
     background-color: #7e808b82;
     width: 500px;
@@ -142,5 +143,5 @@
     width: 100%;
     height: 100vh;
     background: rgba(50, 53, 70, 0.6);
-    z-index: 99;
+    z-index: 98;
 }

@@ -41,6 +41,10 @@
     width: 100%;
 
     @include for-max-width-fullHd {
+        padding-inline: 7%;
+    }
+
+    @include for-max-width-tabled {
         padding-inline: 2%;
     }
 }
@@ -207,10 +211,14 @@
     padding-inline: 30px;
     display: flex;
     justify-content: center;
-    width: fit-content;
+    width: 100%;
 
     div {
         display: flex;
+    }
+
+    @include for-max-width-tabled {
+        padding-inline: 15px;
     }
 }
 
@@ -218,7 +226,8 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
+    width: 90%;
 
     span {
         background: #FFFFFF;
@@ -291,7 +300,6 @@
 
 
 .inlineWrapp {
-    margin-bottom: -100px;
     gap: 60px;
 
     @include for-max-width-tabled {

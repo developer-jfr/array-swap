@@ -85,7 +85,7 @@ const Swap = () => {
                 </div>
               </div>
               <div className={classes.secondNumberGroup}>
-                <div>
+                <div style={{width: '100%', gap: '10px'}} >
                   <div className={classes.secondNumbers}>
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((el) => (
                       <span key={el}>{el}</span>
