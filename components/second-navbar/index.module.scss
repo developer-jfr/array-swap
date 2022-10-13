@@ -10,6 +10,10 @@
         padding-inline: 10px;
         padding-left: 20px;
     }
+
+    @include for-max-width-tabled {
+        z-index: 1;
+    }
 }
 
 .navbarItem {
