@@ -14,9 +14,6 @@ const BuyNft = ({ setShowNft , isInline, setIsInline, showNft}) => {
   const isDesktop = useMediaQuery({
     query: '(max-width: 900px)'
   });
-  const isMobileScreeen = useMediaQuery({
-    query: '(max-width: 600px)'
-  });
   return (
     <>
     <div onClick={() => setShowNft(false)} className={showNft && isInline ? classes.inlineBg : ''}></div>
@@ -26,7 +23,7 @@ const BuyNft = ({ setShowNft , isInline, setIsInline, showNft}) => {
           <h2>Buy 5 NFT’s</h2>
           <div>
             <span>Clear</span>
-            {isMobileScreeen ? (
+            {isDesktop ? (
               <Image
               className={`is-clickable ${isInline && classes.isInline}`}
               onClick={() => setShowNft(false)} 
