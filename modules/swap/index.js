@@ -8,6 +8,7 @@ import SelectToken from "./components/select-token";
 import BuyNft from "./components/buy-nft";
 import TokenSelect from "../../components/select";
 import ConnectWalletModal from '../../components/connectWallet';
+import { useMediaQuery } from "react-responsive";
 
 const SmallArrowRight = "/assets/images/icons/small-arrow-right.svg";
 const EtherumBlack = "/assets/images/icons/black-ethrerum.svg";
@@ -23,14 +24,20 @@ const Swap = () => {
 
   const [showToken, setShowToken] = useState(false);
   const [showNft, setShowNft] = useState(false);
+  const isMobileScreen = useMediaQuery({
+    query: '(max-width: 500px)'
+  });
 
   return (
-    <div>
-      {showToken && <SelectToken setShowToken={setShowToken} />}
+    <>
+     {showToken && <SelectToken setShowToken={setShowToken} />}
       {showSettings && (
         <TransactionSettings setShowSettings={setShowSettings} />
       )}
       {walletModalShow && <ConnectWalletModal />}
+    <div>
+      <div>
+      <div>
       <div
         className={`${classes.marketWrapp} ${showNft && !isInline ? classes.paddingLeft : ''}`}
       >
@@ -43,8 +50,9 @@ const Swap = () => {
           </div>
         </div>
       </div>
+      </div>
       <div className={`is-flex ${classes.inlineWrapp}`} style={{ background: "#F1F1F3"}}>
-        <div className={`${classes.transactionMain} ${showNft && classes.mainInline}`}>
+        <div className={`${classes.transactionMain} ${showNft  && !isInline ? classes.mainInline : ''}`}>
           <div className={`${classes.transactionWrapp} ${showNft && classes.transactionWrappActive} ${isInline && classes.isInline}`}>
             <div className="is-flex is-justify-content-end mb-3">
               <Image
@@ -67,7 +75,7 @@ const Swap = () => {
                 <Image src={SelectBlack} height={20} width={20} />
               </div>
             </div>
-            <div className="is-flex is-justify-content-center is-align-items-center pb-5">
+            <div style={{marginTop: '-20px'}} className="is-flex is-justify-content-center is-align-items-center pb-5">
               <Image
                 className="is-clickable"
                 src={ArrowDownWithoutLine}
@@ -102,13 +110,15 @@ const Swap = () => {
               </div>
             </div>
            <div>
-           <LinearButton text="Connect wallet" width="100%" padding="24px 0"  link="#" />
+           <LinearButton text="Connect wallet" fontWeight={isMobileScreen ? '300'  : ''} fontSize={isMobileScreen ? '10px' : ''} width="100%" padding={isMobileScreen ? "20px 0"  : "24px 0"} link="#" />
            </div>
           </div>
         </div>
         {showNft && <BuyNft setIsInline={setIsInline} showNft={showNft} isInline={isInline} setShowNft={setShowNft} />}
       </div>
+      </div>
     </div>
+    </>
   );
 };
 
