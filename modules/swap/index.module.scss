@@ -46,7 +46,7 @@
 
 .mainInline {
     padding-inline: 5%;
-    padding-right: 0;
+    padding-right: 0 !important;
     @include for-max-width-desktop1200 {
         padding-inline: 3%;
     }
