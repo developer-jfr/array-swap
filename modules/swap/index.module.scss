@@ -96,7 +96,7 @@
     text-transform: uppercase;
     color: #2B2D3C;
 
-    @include for-max-width-desktop1200 {
+    @include for-max-width-fullHd{
         font-size: 25px;
     }
 
@@ -112,7 +112,7 @@
     padding-bottom: 40px;
     text-transform: uppercase;
 
-    @include for-max-width-desktop1200 {
+    @include for-max-width-fullHd {
         font-size: 16px;
     }
 
