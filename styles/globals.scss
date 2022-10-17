@@ -83,7 +83,7 @@ a {
 .navbar-burger {
   display: none !important;
   @include for-max-width-desktop {
-    display: block !important;
+    display: flex !important;
   }
 }
 
