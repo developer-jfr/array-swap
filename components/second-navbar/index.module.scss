@@ -21,6 +21,7 @@
     }
 }
 
+
 .navbarItem {
     @include for-max-width-desktop {
         text-align: center;
@@ -35,7 +36,7 @@
 .navbarStart {
     @include for-max-width-fullHd {
         padding-left: 0 !important;
-        margin-left: 0 !important;
+        margin-left: 50px !important;
     }
 }
 

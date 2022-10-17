@@ -80,6 +80,13 @@ a {
 
 /* ================= Tabs End =============================== */
 
+.navbar-burger {
+  display: none !important;
+  @include for-max-width-desktop {
+    display: block !important;
+  }
+}
+
 .table thead td,
 .table thead th {
   border-width: 0;

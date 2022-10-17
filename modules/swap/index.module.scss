@@ -2,18 +2,18 @@
 
 .marketWrapp {
     background: #2B2D3C;
-    padding-inline: 19.1%;
+    padding-inline: 16.1%;
     padding-top: 30px;
     padding-bottom: 115px;
 
     @include for-max-width-fullHd {
-        padding-inline: 14.1%;
+        padding-inline: 11.1%;
 
     }
 
     @include for-max-width-fullTabled {
         padding-bottom: 40px;
-        padding-inline: 5%;
+        padding-inline: 2%;
     }
 }
 
@@ -33,29 +33,26 @@
 
 .transactionMain {
     width: 100%;
-    padding-inline: 20%;
+    padding-inline: 17%;
 
     @include for-max-width-fullHd {
-        padding-inline: 15%;
+        padding-inline: 12%;
     }
 
     @include for-max-width-fullTabled {
-        padding-inline: 5%;
+        padding-inline: 2%;
     }
 }
 
 .mainInline {
-    padding-inline: 5%;
+    padding-inline: 2%;
     padding-right: 0 !important;
-    @include for-max-width-desktop1200 {
-        padding-inline: 3%;
-    }
 }
 
 .transactionWrapp {
     margin-top: -72px;
     margin-bottom: 150px;
-    width: 890px;
+    width: 100%;
     padding: 30px;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(47, 49, 66, 0.1);
@@ -291,20 +288,14 @@
 }
 
 .paddingLeft {
-    padding-inline: 5%;
+    padding-inline: 2%;
 
-    @include for-max-width-desktop1200 {
-        padding-inline: 3%;
-    }
 }
 
 
 .inlineWrapp {
     gap: 15px;
      
-    @include for-max-width-desktop {
-        gap: 0;
-    }
 
     @include for-max-width-tabled {
         gap: 5px;
