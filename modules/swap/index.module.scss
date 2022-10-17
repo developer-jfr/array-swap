@@ -47,7 +47,7 @@
 .mainInline {
     padding-inline: 5%;
     padding-right: 0;
-    @include for-max-width-desktop {
+    @include for-max-width-desktop1200 {
         padding-inline: 3%;
     }
 }
@@ -291,14 +291,20 @@
 }
 
 .paddingLeft {
-    padding-inline: 5% !important;
+    padding-inline: 5%;
+
+    @include for-max-width-desktop1200 {
+        padding-inline: 3%;
+    }
 }
 
 
 .inlineWrapp {
     gap: 15px;
      
-    
+    @include for-max-width-desktop {
+        gap: 0;
+    }
 
     @include for-max-width-tabled {
         gap: 5px;

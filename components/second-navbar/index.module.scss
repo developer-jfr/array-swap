@@ -6,6 +6,11 @@
     padding-inline: 50px;
     border-bottom: 1px solid #494D66;
     z-index: 99;
+
+    @include for-max-width-fullHd {
+        padding-inline: 20px;
+    }
+
     @include for-max-width-desktop {
         padding-inline: 10px;
         padding-left: 20px;
@@ -28,7 +33,7 @@
 }
 
 .navbarStart {
-    @include for-max-width-desktop {
+    @include for-max-width-fullHd {
         padding-left: 0 !important;
         margin-left: 0 !important;
     }
@@ -38,22 +43,22 @@
     position: relative;
     color: #F1F1F3;
     font-weight: 600;
-    
+
 }
 
 .active a::after {
-  content: '';
-  position: absolute;
-  bottom: -140%;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #F506FE 0%, #06D6DF 100%);
+    content: '';
+    position: absolute;
+    bottom: -140%;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #F506FE 0%, #06D6DF 100%);
 
-  @include for-max-width-desktop {
-    display: none;
-  }
+    @include for-max-width-desktop {
+        display: none;
+    }
 }
 
 .navbarItem a:hover {
@@ -67,6 +72,7 @@
     width: 24px;
     height: 24px;
     display: none;
+
     @include for-max-width-desktop {
         display: block;
     }
@@ -76,14 +82,14 @@
 .navbarMenu {
     @include for-max-width-desktop {
         height: 100vh;
-    width: 80%;
-    float: right;
-    position: fixed;
-    bottom: -80px;
-    right: 0;
-    background: #2B2D3C;
-    margin-top: 5px;
-    display: none;
-    z-index: 999;
+        width: 80%;
+        float: right;
+        position: fixed;
+        bottom: -80px;
+        right: 0;
+        background: #2B2D3C;
+        margin-top: 5px;
+        display: none;
+        z-index: 999;
     }
 }
