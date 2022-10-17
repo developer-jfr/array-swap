@@ -7,19 +7,13 @@
     padding-bottom: 115px;
 
     @include for-max-width-fullHd {
-        padding-inline: 6.1%;
-
-    }
-
-
-    @include for-max-width-desktop {
-        padding-inline: 0%;
+        padding-inline: 14.1%;
 
     }
 
     @include for-max-width-tabled {
         padding-bottom: 40px;
-        
+        padding-inline: 5%;
     }
 }
 
@@ -42,20 +36,19 @@
     padding-inline: 20%;
 
     @include for-max-width-fullHd {
-        padding-inline: 7%;
+        padding-inline: 15%;
     }
 
     @include for-max-width-tabled {
-        padding-inline: 2%;
+        padding-inline: 5%;
     }
 }
 
 .mainInline {
-    padding-inline: 10%;
+    padding-inline: 5%;
     padding-right: 0;
-    @include for-max-width-desktop1200 {
-        padding-inline: 5%;
-        padding-right: 0;
+    @include for-max-width-desktop {
+        padding-inline: 3%;
     }
 }
 
@@ -69,7 +62,6 @@
     border-radius: 10px;
 
     @include for-max-width-fullHd {
-        margin-left: 0 !important;
         width: 100%;
     }
 
@@ -104,7 +96,11 @@
     text-transform: uppercase;
     color: #2B2D3C;
 
-    @include for-max-width-desktop {
+    @include for-max-width-desktop1200 {
+        font-size: 25px;
+    }
+
+    @include for-max-width-tabled {
         font-size: 20px;
     }
 }
@@ -116,7 +112,11 @@
     padding-bottom: 40px;
     text-transform: uppercase;
 
-    @include for-max-width-desktop {
+    @include for-max-width-desktop1200 {
+        font-size: 16px;
+    }
+
+    @include for-max-width-tabled {
         font-size: 15px;
     }
 }
@@ -291,27 +291,14 @@
 }
 
 .paddingLeft {
-    padding-inline: 10% !important;
-
-    @include for-max-width-desktop1200 {
-        padding-inline: 5% !important;
-
-    }
-
-    @include for-max-width-desktop {
-        padding-inline: 2% !important;
-
-    }
+    padding-inline: 5% !important;
 }
 
 
 .inlineWrapp {
-    gap: 60px;
+    gap: 15px;
      
-    @include for-max-width-desktop1200 {
-        gap: 20px;
-    }
-
+    
 
     @include for-max-width-tabled {
         gap: 5px;

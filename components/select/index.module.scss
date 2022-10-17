@@ -17,7 +17,11 @@
     line-height: 32px;
     color: #F1F1F3;
 
-    @include for-max-width-desktop {
+    @include for-max-width-fullHd {
+        font-size: 25px;
+    }
+
+    @include for-max-width-tabled {
         font-size: 20px;
     }
 }
