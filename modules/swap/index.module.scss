@@ -11,7 +11,7 @@
 
     }
 
-    @include for-max-width-tabled {
+    @include for-max-width-fullTabled {
         padding-bottom: 40px;
         padding-inline: 5%;
     }
@@ -39,7 +39,7 @@
         padding-inline: 15%;
     }
 
-    @include for-max-width-tabled {
+    @include for-max-width-fullTabled {
         padding-inline: 5%;
     }
 }
@@ -66,7 +66,7 @@
     }
 
 
-    @include for-max-width-tabled {
+    @include for-max-width-fullTabled {
         margin-top: 50px;
         margin-bottom: 50px;
         padding: 20px;
