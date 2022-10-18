@@ -20,8 +20,9 @@ const SecondNavbar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const { isConnected, address } = useAccount();
   const isNavbarShow = useMediaQuery({ query: '(max-width: 1023px)' })
- 
-  const [connectWallet, setConnectWallet] = useState(false);
+  const isDesktop1200 = useMediaQuery({
+    query: '(max-width: 1350px)'
+  });
   const router = useRouter();
 
   const menuClasses = classNames("navbar-menu", {
@@ -48,7 +49,7 @@ const SecondNavbar = () => {
         role="navigation"
         aria-label="main navigation"
       >
-        <div className="navbar-brand">
+        <div className={`navbar-brand ${classes.navbarBrand}`}>
           <Link href="/">
             <Image
               className="navbar-item is-clickable"
@@ -130,6 +131,7 @@ const SecondNavbar = () => {
                     <ConnectedWallet text={address} />
                   ) : (
                     <LinearButton
+                    fontSize={isDesktop1200 && '14px'} 
                       text="Connect Wallet"
                       setOpenWallet={setOpenWallet}
                       link="#"

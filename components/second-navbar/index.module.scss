@@ -21,6 +21,12 @@
     }
 }
 
+.navbarBrand {
+    width: 10%;
+    @include for-max-width-desktop {
+        width: auto;
+    }
+}
 
 .navbarItem {
     @include for-max-width-desktop {
@@ -31,12 +37,15 @@
 .navbarItem a {
     color: #D9D9D9;
     font-size: 15px;
+    @include for-max-width-fullHd {
+        font-size: 14px;
+    }
 }
 
 .navbarStart {
     @include for-max-width-fullHd {
         padding-left: 0 !important;
-        margin-left: 50px !important;
+        margin-left: 30px !important;
     }
 }
 
