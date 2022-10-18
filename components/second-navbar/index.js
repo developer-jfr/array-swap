@@ -131,7 +131,6 @@ const SecondNavbar = () => {
                     <ConnectedWallet text={address} />
                   ) : (
                     <LinearButton
-                    fontSize={isDesktop1200 && '14px'} 
                       text="Connect Wallet"
                       setOpenWallet={setOpenWallet}
                       link="#"
