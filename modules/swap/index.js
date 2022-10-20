@@ -154,7 +154,7 @@ const Swap = () => {
                     <LinearButton
                       text="Connect wallet"
                       fontWeight={isMobileScreen ? "300" : ""}
-                      fontSize={isMobileScreen ? "10px" : ""}
+                      fontSize={isMobileScreen ? "15px" : ""}
                       width="100%"
                       padding={isMobileScreen ? "20px 0" : "24px 0"}
                       link="#"
