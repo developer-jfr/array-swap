@@ -11,7 +11,9 @@ const Logo = "/assets/images/svg/logo.svg";
 const Hamburger = "/assets/images/icons/hamburger.svg";
 const CloseHanburger = "/assets/images/icons/close-hamburger.svg";
 
-const NavBar = ({burgerOpen, setBurgerOpen}) => {
+const NavBar = () => {
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
   const isDesktopScreen = useMediaQuery({ query: "(max-width: 1023px)" });
   const menuClasses = classnames("navbar-menu", {
     ["is-active"]: burgerOpen,
@@ -33,7 +35,9 @@ const NavBar = ({burgerOpen, setBurgerOpen}) => {
           />
         </Link>
         <div className="is-flex is-align-items-center">
-        <button className={classes.linearBtn}>Launch App</button>
+        <Link href='/swap'>
+        <a className={classes.linearBtn}>Launch App</a>
+        </Link>
         <a
           role="button"
           className={`navbar-burger is-flex is-justify-content-center is-align-items-center ${burgerOpen && "is-active"}`}

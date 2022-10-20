@@ -12,9 +12,12 @@ const Logo = "/assets/images/svg/logo-white.svg";
 const Hamburger = "/assets/images/icons/hamburger.svg";
 const CloseHanburger = "/assets/images/icons/close-hamburger.svg";
 
-const Footer = ({burgerOpen, setBurgerOpen}) => {
-  const isDesktopScreen = useMediaQuery({ query: "(max-width: 1023px)" });
-  
+const Footer = () => {
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
+  const menuClasses = classnames("navbar-menu", {
+    ["is-active"]: burgerOpen,
+  });
 
   return (
     <footer
@@ -57,8 +60,8 @@ const Footer = ({burgerOpen, setBurgerOpen}) => {
         </a>
       </div>
 
-      <div id="navbarBasicExample" className='navbar-menu'>
-        <div className="navbar-start" >
+      <div id="navbarBasicExample" className={`${menuClasses} ${classes.footerMenu}`}>
+        <div className={`navbar-start ${classes.footerStart}`} >
         <div className={`navbar-item ${classes.footerItem}`}>
             <Link href='/' >
             Medium

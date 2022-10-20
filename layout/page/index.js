@@ -42,7 +42,6 @@ const client = createClient({
 });
 
 const Page = ({ children }) => {
-  const [burgerOpen, setBurgerOpen] = useState(false);
   const router = useRouter();
 
   let renderNavbar = false;
@@ -53,9 +52,9 @@ const Page = ({ children }) => {
   } 
   return (
     <WagmiConfig client={client}>
-      {renderNavbar ? <SecondNavbar /> :  <Navbar burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen}  /> }
+      {renderNavbar ? <SecondNavbar /> :  <Navbar  /> }
       {children}
-      <Footer burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
+      <Footer />
     </WagmiConfig>
   );
 };

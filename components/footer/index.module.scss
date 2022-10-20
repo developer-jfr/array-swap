@@ -2,6 +2,32 @@
 
 .customNavbar {
     background: #2B2D3C;
+    @include for-max-width-desktop {
+        position: fixed;
+    bottom: 0;
+    width: 100%;
+    }
+}
+
+.footerMenu { 
+    @include for-max-width-desktop {
+        position: fixed;
+    bottom: 12%;
+    right: 0;
+    width: 80%;
+    height: 76%;
+    text-align: center;
+    background: #2B2D3C;
+    }
+}
+
+.footerStart {
+    @include for-max-width-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+    }
 }
 
 .footerBrank {
