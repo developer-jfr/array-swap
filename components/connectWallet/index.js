@@ -25,6 +25,7 @@ const ConnectWallet = ({ setOpenWallet, openWallet }) => {
             height={20}
             width={20}
             onClick={() => setOpenWallet(false)}
+            alt='cool'
           />
         </div>
         <section class="modal-card-body">

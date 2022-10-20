@@ -29,7 +29,7 @@ const ConnectedWallet = ({text = '01x3290...4454'}) => {
         >
           <span>{truncateHash(text)}</span>
           <span className="icon is-small">
-            <Image src={ArrowDown} height={10} width={10} />
+            <Image src={ArrowDown} height={10} width={10} alt="cool" />
           </span>
         </button>
       </div>
@@ -44,16 +44,16 @@ const ConnectedWallet = ({text = '01x3290...4454'}) => {
           <p>Etherum</p>
           <div className={classes.cardWrapp}>
             <div onClick={() => setShowMenu(el => !el)}>
-              <Image src={Copy} height={18} width={18} />
+              <Image src={Copy} height={18} width={18} alt="cool"  />
               <span onClick={() => copyTextToClipboard(text)}>Copy Address</span>
               
             </div >
-            <a href={`https://etherscan.io/address/${text}`} target='_blank' onClick={() => setShowMenu(el => !el)}>
+            <a href={`https://etherscan.io/address/${text}`} rel="noreferrer" target='_blank' onClick={() => setShowMenu(el => !el)}>
               <Image src={Share} height={18} width={18} />
               <span>View on explorer</span>
             </a>
             <div onClick={() => setShowMenu(el => !el)}>
-              <Image src={Exit} height={18} width={18} />
+              <Image src={Exit} height={18} width={18} alt="cool"  />
               <span onClick={() => disconnect()}>Disconnect wallet</span>
             </div>
           </div>
