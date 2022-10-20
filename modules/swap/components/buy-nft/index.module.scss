@@ -16,11 +16,12 @@
     @include for-max-width-mobile {
         position: relative !important;
         margin-top: auto !important;
-        position: relative;
         top: 0;
         z-index: 0;
         padding-block: 50px;
-        height: 800px;
+        height: 500px;
+        padding-bottom: 0;
+        margin-bottom: -50px;
     }
 }
 
@@ -34,6 +35,10 @@
         font-size: 32px;
         line-height: 39px;
         color: #494D66;
+
+        @include for-max-width-mobile {
+            font-size: 26dpx;
+        }
     }
 
     div {
