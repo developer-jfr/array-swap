@@ -14,6 +14,7 @@ const BuyNft = ({ setShowNft, isInline, setIsInline, showNft }) => {
   const isDesktop = useMediaQuery({
     query: "(max-width: 900px)",
   });
+  
   return (
     <>
       <div

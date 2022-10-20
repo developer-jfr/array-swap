@@ -10,7 +10,7 @@ const SelectToken = ({ setShowToken }) => {
   return (
     <div className={`modal is-active ${classes.modal}`}>
       <div
-        className="modal-background"
+        className={`modal-background ${classes.background}`}
         style={{ background: "rgba(50, 53, 70, 0.6)" }}
         onClick={() => setShowToken(false)}
       ></div>

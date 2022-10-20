@@ -2,6 +2,10 @@
 
 .modal {
     transition: 5s ease-in-out;
+    @include  for-max-width-mobile {
+        position: relative !important;
+        padding-block: 50px;
+    }
 }
 
 .modalCard {
@@ -146,4 +150,10 @@
 
 .active {
     background: linear-gradient(90deg, rgba(250, 2, 255, 0.1) 0%, rgba(6, 214, 223, 0.1) 100%);
+}
+
+.background {
+    @include for-max-width-mobile {
+        background: transparent !important;
+    }
 }

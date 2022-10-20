@@ -1,7 +1,19 @@
-@import '../../../../styles/variables/mixins.scss';s
+@import '../../../../styles/variables/mixins.scss';
 
 .modal {
     transition: 5s ease-in-out;
+
+    @include for-max-width-mobile {
+        position: relative !important;
+        padding-block: 40px;
+    }
+}
+
+
+.modalBackground {
+    @include for-max-width-mobile {
+        background: transparent !important;
+    }
 }
 
 .modalCard {
@@ -30,6 +42,10 @@
     color: #494D66;
     font-weight: 500;
     font-size: 24px;
+
+    @include for-max-width-mobile {
+        font-size: 18px;
+    }
 }
 
 .modalHeader::after {
