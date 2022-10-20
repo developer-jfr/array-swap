@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ConnectedWallet from "../buttons/connectedWalletBtn";
 import LinearButton from "../buttons/linear-button";
 import ConnectWalletModal from "../../components/connectWallet";
