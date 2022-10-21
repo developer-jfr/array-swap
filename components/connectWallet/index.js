@@ -5,6 +5,7 @@ import classes from './index.module.scss';
 const Close = "/assets/images/icons/hix.svg";
 const Metamask = "/assets/images/svg/metamask.svg";
 const ConnectWalletIcon = "/assets/images/svg/walletconnect-logo.svg";
+const Coinbase = '/assets/images/icons/coinbase.svg';
 
 const ConnectWallet = ({ setOpenWallet, openWallet }) => {
   const { address, connector, isConnected } = useAccount();
@@ -41,6 +42,12 @@ const ConnectWallet = ({ setOpenWallet, openWallet }) => {
               setOpenWallet(false)
               }}>
               <img src={ConnectWalletIcon} alt="" />
+            </a>
+            <a onClick={() => {
+              connect({ connector: connectors[2] })
+              setOpenWallet(false)
+              }}>
+              <img src={Coinbase} alt="" />
             </a>
           </div>
         </section>

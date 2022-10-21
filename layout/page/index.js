@@ -15,6 +15,7 @@ import { publicProvider } from "wagmi/providers/public";
 
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
+import { CoinbaseWalletConnector } from "wagmi/connectors/coinbaseWallet";
 
 const alchemyId = process.env.ALCHEMY_ID;
 
@@ -35,7 +36,10 @@ const client = createClient({
       options: {
         qrcode: true,
       },
-    })
+    }),
+    new CoinbaseWalletConnector({
+      chains,
+    }),
   ],
   provider,
   webSocketProvider,
@@ -46,13 +50,16 @@ const Page = ({ children }) => {
 
   let renderNavbar = false;
   if (
-    router.asPath.includes('pool') || router.asPath.includes('swap') || router.asPath.includes('selected-chart') ||  router.asPath.includes('charts')
+    router.asPath.includes("pool") ||
+    router.asPath.includes("swap") ||
+    router.asPath.includes("selected-chart") ||
+    router.asPath.includes("charts")
   ) {
     renderNavbar = true;
-  } 
+  }
   return (
     <WagmiConfig client={client}>
-      {renderNavbar ? <SecondNavbar /> :  <Navbar  /> }
+      {renderNavbar ? <SecondNavbar /> : <Navbar />}
       {children}
       <Footer />
     </WagmiConfig>
