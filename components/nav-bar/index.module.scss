@@ -95,6 +95,10 @@
     margin-top: 5px;
     display: none;
     z-index: 999;
+    @include for-max-width-mobile {
+        top: 12%;
+    height: 74.5%;
+    }
 }
 
 .socialLink {

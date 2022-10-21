@@ -20,6 +20,11 @@
     text-align: center;
     background: #2B2D3C;
     }
+
+    @include for-max-width-mobile {
+        bottom: 12.5%;
+        height: 76.5%;
+    }
 }
 
 .footerStart {
