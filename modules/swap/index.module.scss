@@ -11,6 +11,10 @@
 
     }
 
+    @include for-max-width-desktop {
+        padding-top: 100px;
+    }
+
     @include for-max-width-fullTabled {
         padding-bottom: 40px;
         padding-inline: 2%;

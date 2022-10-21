@@ -13,6 +13,7 @@
 
     @include for-max-width-desktop {
         padding-inline: 40px;
+        padding-top: 100px;
     }
 
     @include for-max-width-tabled {
