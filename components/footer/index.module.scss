@@ -22,11 +22,13 @@
 }
 
 .footerStart {
+    margin-left: 80px;
     @include for-max-width-desktop {
         display: flex;
         flex-direction: column;
         gap: 20px;
         padding-top: 20px;
+        margin-left: 0;
     }
 }
 

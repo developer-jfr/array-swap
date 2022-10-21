@@ -28,7 +28,7 @@ const Footer = () => {
       <div className={`navbar-brand ${classes.footerBrank}`}>
         <Link href="/">
           <Image
-            className="navbar-item is-clickable"
+            className="navbar-item is-clickable pr-5"
             src={Logo}
             height={28}
             width={140}
