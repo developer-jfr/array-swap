@@ -6,8 +6,6 @@
     padding-inline: 50px;
     border-bottom: 1px solid #494D66;
     z-index: 99;
-    position: fixed;
-    width: 100%;
 
     @include for-max-width-fullHd {
         padding-inline: 20px;
@@ -16,6 +14,8 @@
     @include for-max-width-desktop {
         padding-inline: 10px;
         padding-left: 20px;
+        position: fixed;
+        width: 100%;
     }
 
     @include for-max-width-tabled {

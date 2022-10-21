@@ -2,10 +2,12 @@
 
 .customNavbar {
     background: #2B2D3C;
-    position: fixed;
+    width: 100%;
+    @include for-max-width-desktop {
+        position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    }
 }
 
 
