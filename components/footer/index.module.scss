@@ -12,10 +12,11 @@
 .footerMenu { 
     @include for-max-width-desktop {
         position: fixed;
-    bottom: 12%;
+    bottom: 11%;
     right: 0;
     width: 80%;
-    height: 76%;
+    height: 79%;
+
     text-align: center;
     background: #2B2D3C;
     }

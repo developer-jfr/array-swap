@@ -93,11 +93,11 @@
 
 .navbarMenu {
     @include for-max-width-desktop {
-        height: 100vh;
+        height: 79%;
         width: 80%;
         float: right;
         position: fixed;
-        bottom: -80px;
+        top: 9.2%;
         right: 0;
         background: #2B2D3C;
         margin-top: 5px;

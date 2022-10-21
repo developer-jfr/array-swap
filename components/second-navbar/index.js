@@ -126,7 +126,7 @@ const SecondNavbar = () => {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <div style={{width: '100%'}} className={`${isNavbarShow && 'is-flex is-justify-content-center'}`} >
+                <div style={{width: '100%'}} className='is-flex is-justify-content-center'>
                   {isConnected ? (
                     <ConnectedWallet text={address} />
                   ) : (
