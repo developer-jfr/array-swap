@@ -92,6 +92,7 @@
 
 
 .navbarMenu {
+    box-shadow: none;
     @include for-max-width-desktop {
         height: 79%;
         width: 80%;

@@ -39,7 +39,7 @@ const client = createClient({
     }),
     new CoinbaseWalletConnector({
       chains,
-    }),
+    })
   ],
   provider,
   webSocketProvider,

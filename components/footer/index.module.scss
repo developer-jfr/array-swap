@@ -10,6 +10,7 @@
 }
 
 .footerMenu { 
+    box-shadow: none;
     @include for-max-width-desktop {
         position: fixed;
     bottom: 11%;
