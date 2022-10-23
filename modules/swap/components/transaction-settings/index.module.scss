@@ -6,6 +6,7 @@
     @include for-max-width-mobile {
         position: relative !important;
         padding-block: 40px;
+        z-index: 0 !important;
     }
 }
 

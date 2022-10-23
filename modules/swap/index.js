@@ -3,12 +3,14 @@ import classes from "./index.module.scss";
 
 import LinearButton from "./../../components/buttons/linear-button";
 import TransactionSettings from "./components/transaction-settings";
-import { useState } from "react";
+import { memo, useEffect, useState } from "react";
 import SelectToken from "./components/select-token";
 import BuyNft from "./components/buy-nft";
 import TokenSelect from "../../components/select";
 import ConnectWalletModal from "../../components/connectWallet";
 import { useMediaQuery } from "react-responsive";
+import ToastifyAlert from "../../components/toastify-alert";
+import { useConnect } from "wagmi";
 
 const SmallArrowRight = "/assets/images/icons/small-arrow-right.svg";
 const EtherumBlack = "/assets/images/icons/black-ethrerum.svg";
@@ -21,12 +23,15 @@ const Swap = () => {
   const [showSettings, setShowSettings] = useState(false);
   const [isInline, setIsInline] = useState(false);
   const [walletModalShow, setWalletModalShow] = useState(false);
-
+  const { error,isError } =
+    useConnect();
   const [showToken, setShowToken] = useState(false);
   const [showNft, setShowNft] = useState(false);
   const isMobileScreen = useMediaQuery({
     query: "(max-width: 500px)",
   });
+
+  
 
   return (
     <>
@@ -98,6 +103,7 @@ const Swap = () => {
                       width={30}
                     />
                   </div>
+                  
                   <div className={classes.transactionNaming}>
                     <h2>Exchange</h2>
                     <p>Swap NFT For Tokens</p>
@@ -160,6 +166,8 @@ const Swap = () => {
                       link="#"
                     />
                   </div>
+                 
+
                 </div>
               )}
             </div>
@@ -171,6 +179,7 @@ const Swap = () => {
                 setShowNft={setShowNft}
               />
             )  :''}
+            {isError && <ToastifyAlert text={error.code} />}
           </div>
         </div>
       </div>
@@ -178,4 +187,4 @@ const Swap = () => {
   );
 };
 
-export default Swap;
+export default memo(Swap);

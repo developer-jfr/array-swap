@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useAccount, useConnect, useDisconnect,  } from "wagmi";
+import { useAccount, useConnect, useDisconnect  } from "wagmi";
 import classes from './index.module.scss';
 
 const Close = "/assets/images/icons/hix.svg";
@@ -9,11 +9,12 @@ const Coinbase = '/assets/images/icons/coinbase.svg';
 
 const ConnectWallet = ({ setOpenWallet, openWallet }) => {
   const { address, connector, isConnected,status } = useAccount();
-  const { connect, connectors, error, isLoading, pendingConnector } =
+  const { connect, connectors, error,isError } =
     useConnect();
 
 
-    console.log(error)
+
+
 
   return (
     <div class={`modal ${isConnected && openWallet ? "" : "is-active"} ${classes.modal}`}>
@@ -36,7 +37,9 @@ const ConnectWallet = ({ setOpenWallet, openWallet }) => {
           <div className={classes.itemsWrapp}>
             <a onClick={() => {
               connect({ connector: connectors[0] })
+              console.log(error)
               setOpenWallet(false)
+              
             }}>
               <img src={Metamask} alt="" />
             </a>

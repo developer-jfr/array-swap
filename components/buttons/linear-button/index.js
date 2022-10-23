@@ -8,7 +8,6 @@ const LinearButton = ({text = 'Launch App', bG, width, padding, link= '#', setOp
             if(setOpenWallet) {
               setOpenWallet(true)
             } 
-            console.log('not')
            }} className={classes.linearBtn} style={{background: `${bG}`, width: `${width}`, padding: `${padding}` , fontSize: `${fontSize}`, fontWeight: `${fontWeight}`,}}>{text}</button>
 
       </Link>
