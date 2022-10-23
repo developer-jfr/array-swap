@@ -1,5 +1,16 @@
+@import '../../styles/variables/mixins.scss';;
+
+.modal {
+    @include for-max-width-tabled {
+        justify-content: flex-end;
+    }
+}
+
 .modalCard {
     border-radius: 20px;
+    @include for-max-width-tabled {
+        height: 55%;
+    }
 }
 
 .itemsWrapp {

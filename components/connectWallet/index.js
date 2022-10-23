@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { useAccount, useConnect, useDisconnect,  } from "wagmi";
 import classes from './index.module.scss';
 
 const Close = "/assets/images/icons/hix.svg";
@@ -8,12 +8,15 @@ const ConnectWalletIcon = "/assets/images/svg/walletconnect-logo.svg";
 const Coinbase = '/assets/images/icons/coinbase.svg';
 
 const ConnectWallet = ({ setOpenWallet, openWallet }) => {
-  const { address, connector, isConnected } = useAccount();
+  const { address, connector, isConnected,status } = useAccount();
   const { connect, connectors, error, isLoading, pendingConnector } =
     useConnect();
 
+
+    console.log(error)
+
   return (
-    <div class={`modal ${isConnected && openWallet ? "" : "is-active"}`}>
+    <div class={`modal ${isConnected && openWallet ? "" : "is-active"} ${classes.modal}`}>
       <div
         class="modal-background"
         style={{ background: "rgba(50, 53, 70, 0.6)" }}
